@@ -7,7 +7,7 @@ import { UserForm } from "./lib";
 import "./lib/css/styles.css";
 class App extends React.Component {
   formEdit = {
-    firstName: "anusky",
+    firstName: "anussasasky",
     username: "anusky123",
     email: "pepito.palotes@somedomain.com",
     password1: "",

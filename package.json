@@ -1,16 +1,16 @@
 {
-  "name": "contactuserform",
+  "name": "contactuserform-v000",
   "version": "1.0.0",
   "description": "Custom contact user form ",
   "license": "MIT",
   "author": "Anusky",
-  "keywords": ["formulary", "react"],
+  "keywords": [],
   "main": "dist/index.js",
   "module": "dist/index.js",
   "files": ["dist", "README.md"],
   "repository": {
     "type": "git",
-    "url": "URL_OF_YOUR_REPOSITORY"
+    "url": "https://github.com/anusky/contactForm/tree/master/"
   },
   "dependencies": {
     "@babel/cli": "7.1.5",

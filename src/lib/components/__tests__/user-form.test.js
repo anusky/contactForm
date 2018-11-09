@@ -1,9 +1,9 @@
-import React from 'react'
-import '../../config/jestSetup'
-import { shallow, mount } from 'enzyme'
-import renderer from 'react-test-renderer'
-import UserForm from '../user-form'
-import { editFormStructure } from '../data/structure'
+import React from "react";
+import "../../../config/jestSetup";
+import { shallow, mount } from "enzyme";
+import renderer from "react-test-renderer";
+import UserForm from "../user-form";
+import { editFormStructure } from "../../../data/structure";
 
 // const dummyFormEdit = {
 //   firstName: 'anusky',
@@ -22,12 +22,12 @@ import { editFormStructure } from '../data/structure'
 
 const userFormWrapper = shallow(
   <UserForm formStructure={editFormStructure} id="register" />
-)
+);
 const userFormWrapperMount = mount(
   <UserForm formStructure={editFormStructure} id="register" />
-)
+);
 
-describe('<UserForm /> ', () => {
+describe("<UserForm /> ", () => {
   // test('UserForm snapshot', () => {
   //   const tree = renderer
   //     .create(<UserForm formStructure={editFormStructure} id="register" />)
@@ -36,30 +36,29 @@ describe('<UserForm /> ', () => {
   // })
 
   it('should be selectable by class "c-userform"', function() {
-    expect(userFormWrapper.is('.c-userform')).toBe(true)
-  })
+    expect(userFormWrapper.is(".c-userform")).toBe(true);
+  });
 
-  it('should mount in a full DOM', function() {
-    expect(userFormWrapperMount.find('.c-userform').length).toBe(1)
-  })
+  it("should mount in a full DOM", function() {
+    expect(userFormWrapperMount.find(".c-userform").length).toBe(1);
+  });
 
-  it('should render as many inputs as there are data for', () => {
-    expect(userFormWrapperMount.find('label').length).toBe(
+  it("should render as many inputs as there are data for", () => {
+    expect(userFormWrapperMount.find("label").length).toBe(
       editFormStructure.length
-    )
+    );
     // expect(userFormWrapper.find(<label> <label/>).length).to.equal(data.editForm.length)
-  })
+  });
 
-  it('should do things when click', () => {
+  it("should do things when click", () => {
     const onButtonClickSpy = jest.spyOn(
       userFormWrapper.instance(),
-      'onClickPrueba'
-    )
-    userFormWrapper.update()
-    userFormWrapper.instance().forceUpdate()
-    console.log(userFormWrapper.debug())
+      "onClickPrueba"
+    );
+    userFormWrapper.update();
+    userFormWrapper.instance().forceUpdate();
 
-    userFormWrapper.find('.caca').simulate('click')
-    expect(onButtonClickSpy).toHaveBeenCalled()
-  })
-})
+    userFormWrapper.find(".caca").simulate("click");
+    expect(onButtonClickSpy).toHaveBeenCalled();
+  });
+});
