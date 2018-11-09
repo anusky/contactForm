@@ -1,0 +1,105 @@
+{
+  "editFormStructure": [
+    {
+      "name": "firstName",
+      "type": "text",
+      "mandatory": false,
+      "validation": [{"method": "maxlength", "length": 8}]
+    },
+    {
+      "name": "username",
+      "type": "text",
+      "mandatory": true,
+      "validation": [{"method": "maxlength","length": 8}]
+    },
+    {
+      "name": "email",
+      "type": "email",
+      "mandatory": true,
+      "validation": [{ "method": "email" }]
+    },
+    {
+      "name": "password1",
+      "type": "password",
+      "mandatory": true,
+      "validation": []
+    },
+    {
+      "name": "password2",
+      "type": "password",
+      "mandatory": true,
+      "validation":[
+        { "method": "comparison", "withwho": "password1", "withValue": ""
+        }
+      ]
+    },
+    {
+      "name": "country",
+      "type": "select",
+      "mandatory": true,
+      "options": ["España", "Inglaterra"],
+      "validation": []
+    },
+    {
+      "name": "addressPostalcode",
+      "type": "number",
+      "mandatory": true,
+      "validation": [
+        { "method": "postalcode"
+        }
+      ]
+    },
+    {
+      "name": "addressCity",
+      "type": "text",
+      "mandatory": false,
+      "validation":[{"method": "maxlength","length": 30}]
+    },
+    {
+      "name": "addressPhone",
+      "type": "text",
+      "mandatory": false,
+      "validation": [
+        { "method": "telephone"
+        }
+      ]
+    },
+    {
+      "name": "copyAddress",
+      "type": "checkbox",
+      "mandatory": false,
+      "validation": []
+    },
+    {
+      "name": "addressPostalcodeInvoice",
+      "type": "number",
+      "mandatory": false,
+      "validation": [
+        {
+          "method": "postalcode"
+        }
+      ]
+    },
+    {
+      "name": "addressCityInvoice",
+      "type": "text",
+      "mandatory": false,
+      "validation": [
+        {
+          "method": "maxlength",
+          "length": 30
+        }
+      ]
+    },
+    {
+      "name": "addressPhoneInvoice",
+      "type": "text",
+      "mandatory": false,
+      "validation": [
+        {
+          "method": "telephone"
+        }
+      ]
+    }
+  ]
+}
