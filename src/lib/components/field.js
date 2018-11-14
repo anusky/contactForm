@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 class Field extends Component {
   static defaultProps = {
@@ -9,11 +9,11 @@ class Field extends Component {
     validation: <div />,
     handleChange: () => {},
     handleValidate: () => {}
-  };
+  }
 
   state = {
     value: ''
-  };
+  }
 
   /*
     //Usage
@@ -31,22 +31,25 @@ class Field extends Component {
           }
         />
    */
+  static Error = props => {
+    return props.validated ? '' : props.children
+  }
+
+  static Prueba = props => {
+    return props.children
+  }
 
   render() {
-    const { name, type, value, validation, error, options } = this.props;
+    const {
+      name,
+      type,
+      value,
+      validation,
+      error,
+      options,
+      placeholder
+    } = this.props
     return (
-      // <label>
-      //   <input
-      //     className={`input- ${error ? `input__error` : ``}`}
-      //     onChange={this.props.handleChange}
-      //     onBlur={this.props.handleValidate}
-      //     value={value || this.state.value}
-      //     type={type}
-      //     name={name}
-      //   />
-      //   {validation}
-      // </label>
-
       <label htmlFor={name} key={name}>
         {name}
         {type === 'select' && (
@@ -66,18 +69,19 @@ class Field extends Component {
         )}
         {type !== 'select' && (
           <input
-            className={`input- ${error ? `input__error` : ``}`}
+            className={`input__${name} ${error ? `input__error` : ``}`}
             onChange={this.props.handleChange}
             onBlur={this.props.handleOnBlur}
+            placeholder={placeholder}
             value={value || this.state.value}
             type={type}
             name={name}
           />
         )}
-        {validation}
+        {this.props.children || validation}
       </label>
-    );
+    )
   }
 }
 
-export default Field;
+export default Field
