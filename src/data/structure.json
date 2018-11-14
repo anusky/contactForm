@@ -4,39 +4,51 @@
       "name": "firstName",
       "type": "text",
       "mandatory": false,
-      "validation": [{"method": "maxlength", "length": 8}]
+      "placeholder": "",
+      "validation": [{ "method": "maxlength", "length": 8 }]
+    },
+    {
+      "name": "lastName",
+      "type": "text",
+      "mandatory": false,
+      "placeholder": "",
+      "validation": [{ "method": "maxlength", "length": 8 }]
     },
     {
       "name": "username",
       "type": "text",
       "mandatory": true,
-      "validation": [{"method": "maxlength","length": 8}]
+      "placeholder": "",
+      "validation": [{ "method": "maxlength", "length": 8 }]
     },
     {
       "name": "email",
       "type": "email",
       "mandatory": true,
+      "placeholder": "",
       "validation": [{ "method": "email" }]
     },
     {
       "name": "password1",
       "type": "password",
       "mandatory": true,
-      "validation": []
+      "placeholder": "",
+      "validation": [{ "method": "password" }]
     },
     {
       "name": "password2",
       "type": "password",
       "mandatory": true,
-      "validation":[
-        { "method": "comparison", "withwho": "password1", "withValue": ""
-        }
+      "placeholder": "",
+      "validation": [
+        { "method": "comparison", "withwho": "password1", "withValue": "" }
       ]
     },
     {
       "name": "country",
       "type": "select",
       "mandatory": true,
+      "placeholder": "",
       "options": ["España", "Inglaterra"],
       "validation": []
     },
@@ -44,36 +56,35 @@
       "name": "addressPostalcode",
       "type": "number",
       "mandatory": true,
-      "validation": [
-        { "method": "postalcode"
-        }
-      ]
+      "placeholder": "",
+      "validation": [{ "method": "postalcode" }]
     },
     {
       "name": "addressCity",
       "type": "text",
       "mandatory": false,
-      "validation":[{"method": "maxlength","length": 30}]
+      "placeholder": "p.e: Barcelona",
+      "validation": [{ "method": "maxlength", "length": 30 }]
     },
     {
       "name": "addressPhone",
       "type": "text",
       "mandatory": false,
-      "validation": [
-        { "method": "telephone"
-        }
-      ]
+      "placeholder": "",
+      "validation": [{ "method": "telephone" }]
     },
     {
       "name": "copyAddress",
       "type": "checkbox",
       "mandatory": false,
+      "placeholder": "",
       "validation": []
     },
     {
       "name": "addressPostalcodeInvoice",
       "type": "number",
       "mandatory": false,
+      "placeholder": "",
       "validation": [
         {
           "method": "postalcode"
@@ -84,6 +95,7 @@
       "name": "addressCityInvoice",
       "type": "text",
       "mandatory": false,
+      "placeholder": "",
       "validation": [
         {
           "method": "maxlength",
@@ -95,6 +107,7 @@
       "name": "addressPhoneInvoice",
       "type": "text",
       "mandatory": false,
+      "placeholder": "",
       "validation": [
         {
           "method": "telephone"
