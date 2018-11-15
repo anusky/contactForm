@@ -49,4 +49,16 @@ describe('<UserForm /> ', () => {
     )
     // expect(userFormWrapper.find(<label> <label/>).length).to.equal(data.editForm.length)
   })
+
+  it('should do things when click', () => {
+    const onButtonClickSpy = jest.spyOn(
+      userFormWrapper.instance(),
+      'onClickPrueba'
+    )
+    userFormWrapper.update()
+    userFormWrapper.instance().forceUpdate()
+
+    userFormWrapper.find('.caca').simulate('click')
+    expect(onButtonClickSpy).toHaveBeenCalled()
+  })
 })

@@ -2,7 +2,7 @@ import React from 'react'
 import { render } from 'react-dom'
 import data from './data/structure'
 import { UserForm } from './lib'
-import './lib/css/styles.css'
+
 class Prueba extends React.Component {
   formEdit = {
     firstName: 'somename',
@@ -23,21 +23,33 @@ class Prueba extends React.Component {
     console.log('formSubmitData ', formSubmitData)
   }
   render() {
-    // const style = {
-    //   display: 'flex'
-    // }
-    // console.log('data ', data)
+    const Validation = params => {
+      const { valid, message_type } = params
+      return !valid ? (
+        <div style={{ color: 'tomato' }}>
+          {message_type ? message_type : `CustomInvalid`}
+        </div>
+      ) : (
+        ''
+      )
+    }
+    const SubmitButton = () => (
+      <button type="submit" variant="contained" className={`buttona`}>
+        Submita
+      </button>
+    )
+
     return (
       <div>
         <UserForm
           formStructure={data.editFormStructure}
           id="register"
+          formEdit={this.formEdit}
           submit={this.submitData}
-        >
-          <UserForm.Error className="quepasa">
-            <div style={{ color: 'tomato' }}>pete que te pete </div>
-          </UserForm.Error>
-        </UserForm>
+          Validation={Validation}
+          SubmitButton={SubmitButton}
+          SubmitButtonText={`Submit`}
+        />
       </div>
     )
   }

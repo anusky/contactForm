@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 class Field extends Component {
   static defaultProps = {
-    name: 'firstName',
+    name: 'exampleInput',
     type: 'text',
     error: false,
     validation: <div />,
@@ -15,39 +15,15 @@ class Field extends Component {
     value: ''
   }
 
-  /*
-    //Usage
-    <Field
-          error={this.state.error.firstName}
-          handleChange={this.handleChange}
-          onBlur={this.handleValidate}
-          value={this.state.form.firstName}
-          type={`text`}
-          name={`firstName`}
-          validation={
-            <div style={validatedStyle(this.state.validated.firstName)}>
-              {`validated: ${this.state.validated.firstName}`}
-            </div>
-          }
-        />
-   */
-  static Error = props => {
-    return props.validated ? '' : props.children
-  }
-
-  static Prueba = props => {
-    return props.children
-  }
-
   render() {
     const {
       name,
       type,
       value,
-      validation,
       error,
       options,
-      placeholder
+      placeholder,
+      validation
     } = this.props
     return (
       <label htmlFor={name} key={name}>
@@ -78,7 +54,7 @@ class Field extends Component {
             name={name}
           />
         )}
-        {this.props.children || validation}
+        {validation}
       </label>
     )
   }
