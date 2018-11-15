@@ -1,3 +1,4 @@
+//this version has a SubmitPrueba to make tests with dynamic buttons
 import React, { Component } from 'react'
 import { validateType } from '../utils'
 import PropTypes from 'prop-types'
@@ -25,10 +26,7 @@ class UserForm extends Component {
     ).isRequired,
     formEdit: PropTypes.object,
     id: PropTypes.string.isRequired,
-    submit: PropTypes.func.isRequired,
-    Validation: PropTypes.func,
-    SubmitButton: PropTypes.func,
-    SubmitButtonText: PropTypes.string
+    submit: PropTypes.func.isRequired
   }
 
   static defaultProps = {
@@ -37,6 +35,7 @@ class UserForm extends Component {
     submit: () => {},
     SubmitButton: params => {
       let { text } = params
+      console.log('params ', params)
       return (
         <button type="submit" variant="contained" className={`buttona`}>
           {text}
@@ -56,6 +55,18 @@ class UserForm extends Component {
     id: '',
     addressList: ['City', 'Postalcode', 'Phone'],
     form: {
+      firstName: '',
+      username: '',
+      email: '',
+      password1: '',
+      password2: '',
+      country: '',
+      addressPostalcode: '',
+      addressCity: '',
+      addressPhone: '',
+      addressPostalcodeInvoice: '',
+      addressCityInvoice: '',
+      addressPhoneInvoice: '',
       copyAddress: false
     },
     error: {},
@@ -156,6 +167,7 @@ class UserForm extends Component {
   }
 
   handleValidate = (event, { name } = event.target) => {
+    console.log('validating name ', name)
     const { [name]: validated } = this.handleValidateUnitaryInput(
       name
     ).validated
@@ -206,6 +218,10 @@ class UserForm extends Component {
     this.setState(stateAux)
   }
 
+  onClickPrueba = event => {
+    console.log('caca')
+  }
+
   render() {
     const { formStructure = [], Validation, SubmitButton } = this.props
     return (
@@ -228,7 +244,11 @@ class UserForm extends Component {
             />
           )
         })}
-        <SubmitButton text={this.props.SubmitButtonText} />
+        <SubmitButton text="submit" />
+
+        <button className={`buttona caca`} onClick={this.onClickPrueba}>
+          SubmitPrueba
+        </button>
       </form>
     )
   }

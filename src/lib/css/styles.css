@@ -41,3 +41,11 @@ form {
 .buttona:hover {
   background-color: #d5d5d5;
 }
+.input--valid {
+  color: green;
+  display: none;
+}
+.input--invalid {
+  color: tomato;
+  display: block;
+}
