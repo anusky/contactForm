@@ -34,6 +34,7 @@ class UserForm extends Component {
   static defaultProps = {
     formStructure: [],
     id: 'register',
+    SubmitButtonText: 'enviar',
     submit: () => {},
     SubmitButton: params => {
       let { text } = params
