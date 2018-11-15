@@ -1,9 +1,9 @@
 {
-  "name": "contactuserform-v000",
-  "version": "1.0.0",
+  "name": "contactuserform",
+  "version": "0.0.3",
   "description": "Custom contact user form ",
   "license": "MIT",
-  "author": "Anusky",
+  "author": "Anusky <anusky.pitrusky@gmail.com>",
   "keywords": [],
   "main": "src/app.js",
   "module": "dist/app.js",
