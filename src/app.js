@@ -13,14 +13,10 @@ class App extends React.Component {
       <div className="App">
         <header>
           <nav>
-            <Link to="/">Home</Link> {' -'}
+            <Link to="/">Home | </Link> 
             <Link to="form">Form</Link>
-            {' - '}
-            <Link to="users/abc">Sally</Link>
           </nav>
         </header>
-        {/*<h1>Hello CodeSandbox</h1> */}
-
         <div style={style} />
         <Router>
           <Form path="/form" />
