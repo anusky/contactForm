@@ -3,7 +3,7 @@ import { render } from 'react-dom'
 import data from './data/structure'
 import { UserForm } from './lib'
 
-class Prueba extends React.Component {
+class Form extends React.Component {
   formEdit = {
     firstName: 'somename',
     lastName: 'somelst',
@@ -25,17 +25,11 @@ class Prueba extends React.Component {
   render() {
     const Validation = params => {
       const { valid, message_type } = params
-      return !valid ? (
-        <div style={{ color: 'tomato' }}>
-          {message_type ? message_type : `CustomInvalid`}
-        </div>
-      ) : (
-        ''
-      )
+      return !valid ? <div style={{ color: 'tomato' }}>{message_type ? message_type : `$_customInvalidMessage`}</div> : ''
     }
     const SubmitButton = () => (
-      <button type="submit" variant="contained" className={`buttona`}>
-        Submita
+      <button type="submit" variant="contained" className={`c-submit-button`}>
+        $_customSubmit
       </button>
     )
 
@@ -45,6 +39,7 @@ class Prueba extends React.Component {
           formStructure={data.editFormStructure}
           id="register"
           formEdit={this.formEdit}
+          formTitle={`$_formTitle`}
           submit={this.submitData}
           Validation={Validation}
           SubmitButton={SubmitButton}
@@ -54,4 +49,4 @@ class Prueba extends React.Component {
     )
   }
 }
-export default Prueba
+export default Form

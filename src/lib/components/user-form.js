@@ -24,6 +24,7 @@ class UserForm extends Component {
       })
     ).isRequired,
     formEdit: PropTypes.object,
+    formTitle: PropTypes.string,
     id: PropTypes.string.isRequired,
     submit: PropTypes.func.isRequired,
     Validation: PropTypes.func,
@@ -33,6 +34,7 @@ class UserForm extends Component {
 
   static defaultProps = {
     formStructure: [],
+    formTitle: '',
     id: 'register',
     SubmitButtonText: 'enviar',
     submit: () => {},
@@ -46,11 +48,7 @@ class UserForm extends Component {
     },
     Validation: params => {
       let { valid } = params
-      return (
-        <div className={`input--${valid ? `valid` : `invalid`}`}>
-          {`validated: ${valid}`}
-        </div>
-      )
+      return <div className={`input--${valid ? `valid` : `invalid`}`}>{`validated: ${valid}`}</div>
     }
   }
   state = {
@@ -65,20 +63,15 @@ class UserForm extends Component {
     validationTypes: {}
   }
 
-  handleValidateUnitaryInput = (
-    element,
-    data = { value: this.state.form[element] }
-  ) => {
+  handleValidateUnitaryInput = (element, data = { value: this.state.form[element] }) => {
     let stateAux = this.state
     const { validationTypes } = this.state
     stateAux.validated[element] = false
     validationTypes[element].length > 0
       ? validationTypes[element].forEach(actualType => {
           const { method, withwho } = actualType
-          actualType.withValue =
-            method === 'comparison' ? this.state.form[withwho] : ''
-          stateAux.validated[element] =
-            stateAux.validated[element] || validateType(actualType, data)
+          actualType.withValue = method === 'comparison' ? this.state.form[withwho] : ''
+          stateAux.validated[element] = stateAux.validated[element] || validateType(actualType, data)
         })
       : (stateAux.validated[element] = true)
     return stateAux
@@ -133,7 +126,7 @@ class UserForm extends Component {
 
   handleGenericChange = ({ value, name }) => {
     let formAux = this.state.form
-    if (name.indexOf('address') !== -1 && this.state.form.copyAddress) {
+    if (name.indexOf('address') !== -1 && name.indexOf('Invoice') === -1 && this.state.form.copyAddress) {
       formAux = { ...formAux, [`${name}Invoice`]: value }
     }
     formAux = { ...formAux, [name]: value }
@@ -157,9 +150,7 @@ class UserForm extends Component {
   }
 
   handleValidate = (event, { name } = event.target) => {
-    const { [name]: validated } = this.handleValidateUnitaryInput(
-      name
-    ).validated
+    const { [name]: validated } = this.handleValidateUnitaryInput(name).validated
     this.setState({
       validated: {
         ...this.state.validated,
@@ -197,21 +188,17 @@ class UserForm extends Component {
     let stateAux = this.state
     stateAux.form.copyAddress = event.target.checked
     stateAux.addressList.forEach(type => {
-      stateAux.form[`address${type}Invoice`] = event.target.checked
-        ? stateAux.form[`address${type}`]
-        : ''
-      stateAux.validated[`address${type}Invoice`] = event.target.checked
-        ? stateAux.validated[`address${type}`]
-        : ''
+      stateAux.form[`address${type}Invoice`] = event.target.checked ? stateAux.form[`address${type}`] : ''
+      stateAux.validated[`address${type}Invoice`] = event.target.checked ? stateAux.validated[`address${type}`] : ''
     })
     this.setState(stateAux)
   }
 
   render() {
-    const { formStructure = [], Validation, SubmitButton } = this.props
+    const { formStructure = [], Validation, SubmitButton, formTitle } = this.props
     return (
       <form className="c-userform" onSubmit={this.handleSubmit}>
-        <h3> automatized </h3>
+        <h3> {`${formTitle}`} </h3>
         {formStructure.map(el => {
           const { name, type, options, placeholder } = el
           return (
