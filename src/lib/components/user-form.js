@@ -46,11 +46,7 @@ class UserForm extends Component {
     },
     Validation: params => {
       let { valid } = params
-      return (
-        <div className={`input--${valid ? `valid` : `invalid`}`}>
-          {`validated: ${valid}`}
-        </div>
-      )
+      return <div className={`input--${valid ? `valid` : `invalid`}`}>{`validated: ${valid}`}</div>
     }
   }
   state = {
@@ -65,20 +61,15 @@ class UserForm extends Component {
     validationTypes: {}
   }
 
-  handleValidateUnitaryInput = (
-    element,
-    data = { value: this.state.form[element] }
-  ) => {
+  handleValidateUnitaryInput = (element, data = { value: this.state.form[element] }) => {
     let stateAux = this.state
     const { validationTypes } = this.state
     stateAux.validated[element] = false
     validationTypes[element].length > 0
       ? validationTypes[element].forEach(actualType => {
           const { method, withwho } = actualType
-          actualType.withValue =
-            method === 'comparison' ? this.state.form[withwho] : ''
-          stateAux.validated[element] =
-            stateAux.validated[element] || validateType(actualType, data)
+          actualType.withValue = method === 'comparison' ? this.state.form[withwho] : ''
+          stateAux.validated[element] = stateAux.validated[element] || validateType(actualType, data)
         })
       : (stateAux.validated[element] = true)
     return stateAux
@@ -157,9 +148,7 @@ class UserForm extends Component {
   }
 
   handleValidate = (event, { name } = event.target) => {
-    const { [name]: validated } = this.handleValidateUnitaryInput(
-      name
-    ).validated
+    const { [name]: validated } = this.handleValidateUnitaryInput(name).validated
     this.setState({
       validated: {
         ...this.state.validated,
@@ -197,12 +186,8 @@ class UserForm extends Component {
     let stateAux = this.state
     stateAux.form.copyAddress = event.target.checked
     stateAux.addressList.forEach(type => {
-      stateAux.form[`address${type}Invoice`] = event.target.checked
-        ? stateAux.form[`address${type}`]
-        : ''
-      stateAux.validated[`address${type}Invoice`] = event.target.checked
-        ? stateAux.validated[`address${type}`]
-        : ''
+      stateAux.form[`address${type}Invoice`] = event.target.checked ? stateAux.form[`address${type}`] : ''
+      stateAux.validated[`address${type}Invoice`] = event.target.checked ? stateAux.validated[`address${type}`] : ''
     })
     this.setState(stateAux)
   }
