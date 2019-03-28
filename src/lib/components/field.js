@@ -1,33 +1,37 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Field extends Component {
   static defaultProps = {
-    name: 'exampleInput',
+    name: 'exampleName',
+    title: 'exampleTitle',
+    titlePosition: 1,
     type: 'text',
     error: false,
     validation: <div />,
     handleChange: () => {},
     handleValidate: () => {}
-  }
+  };
 
   state = {
     value: ''
-  }
+  };
 
   render() {
     const {
       name,
+      title,
+      titlePosition,
       type,
       value,
       error,
       options,
       placeholder,
       validation
-    } = this.props
+    } = this.props;
     return (
       <label htmlFor={name} key={name}>
-        {name}
+        {titlePosition === 1 && title}
         {type === 'select' && (
           <select
             className={`input- ${error ? `input__error` : ``}`}
@@ -54,10 +58,11 @@ class Field extends Component {
             name={name}
           />
         )}
+        {titlePosition === -1 && title}
         {validation}
       </label>
-    )
+    );
   }
 }
 
-export default Field
+export default Field;

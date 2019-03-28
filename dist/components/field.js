@@ -15,6 +15,8 @@ class Field extends Component {
   render() {
     const {
       name,
+      title,
+      titlePosition,
       type,
       value,
       error,
@@ -25,7 +27,7 @@ class Field extends Component {
     return React.createElement("label", {
       htmlFor: name,
       key: name
-    }, name, type === 'select' && React.createElement("select", {
+    }, titlePosition === 1 && title, type === 'select' && React.createElement("select", {
       className: `input- ${error ? `input__error` : ``}`,
       onChange: this.props.handleChange,
       onBlur: this.props.handleChange,
@@ -42,13 +44,15 @@ class Field extends Component {
       value: value || this.state.value,
       type: type,
       name: name
-    }), validation);
+    }), titlePosition === -1 && title, validation);
   }
 
 }
 
 _defineProperty(Field, "defaultProps", {
-  name: 'exampleInput',
+  name: 'exampleName',
+  title: 'exampleTitle',
+  titlePosition: 1,
   type: 'text',
   error: false,
   validation: React.createElement("div", null),

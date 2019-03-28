@@ -62,7 +62,7 @@ class UserForm extends Component {
     }) => {
       let formAux = this.state.form;
 
-      if (name.indexOf('address') !== -1 && this.state.form.copyAddress) {
+      if (name.indexOf('address') !== -1 && name.indexOf('Invoice') === -1 && this.state.form.copyAddress) {
         formAux = { ...formAux,
           [`${name}Invoice`]: value
         };
@@ -198,20 +198,25 @@ class UserForm extends Component {
     const {
       formStructure = [],
       Validation,
-      SubmitButton
+      SubmitButton,
+      formTitle
     } = this.props;
     return React.createElement("form", {
       className: "c-userform",
       onSubmit: this.handleSubmit
-    }, React.createElement("h3", null, " automatized "), formStructure.map(el => {
+    }, React.createElement("h3", null, " ", `${formTitle}`, " "), formStructure.map(el => {
       const {
         name,
         type,
         options,
-        placeholder
+        placeholder,
+        title,
+        titlePosition
       } = el;
       return React.createElement(Field, {
         key: name,
+        title: title,
+        titlePosition: titlePosition,
         error: this.state.error[name],
         handleChange: this.handleChange,
         handleOnBlur: this.handleValidate,
@@ -234,6 +239,8 @@ class UserForm extends Component {
 _defineProperty(UserForm, "propTypes", {
   formStructure: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    titlePosition: PropTypes.number.isRequired,
     type: PropTypes.string.isRequired,
     mandatory: PropTypes.bool.isRequired,
     placeholder: PropTypes.string.isRequired,
@@ -246,6 +253,7 @@ _defineProperty(UserForm, "propTypes", {
     options: PropTypes.arrayOf(PropTypes.string)
   })).isRequired,
   formEdit: PropTypes.object,
+  formTitle: PropTypes.string,
   id: PropTypes.string.isRequired,
   submit: PropTypes.func.isRequired,
   Validation: PropTypes.func,
@@ -255,6 +263,7 @@ _defineProperty(UserForm, "propTypes", {
 
 _defineProperty(UserForm, "defaultProps", {
   formStructure: [],
+  formTitle: '',
   id: 'register',
   SubmitButtonText: 'enviar',
   submit: () => {},
@@ -265,7 +274,7 @@ _defineProperty(UserForm, "defaultProps", {
     return React.createElement("button", {
       type: "submit",
       variant: "contained",
-      className: `buttona`
+      className: `c-button`
     }, text);
   },
   Validation: params => {
