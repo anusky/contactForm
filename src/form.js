@@ -3,21 +3,23 @@ import { render } from 'react-dom'
 import data from './data/structure'
 import { UserForm } from './lib'
 
-class Prueba extends React.Component {
+class Form extends React.Component {
   formEdit = {
     firstName: 'somename',
     lastName: 'somelst',
     username: 'user',
     email: 'pepito.palotes@somedomain.com',
-    password1: '',
-    password2: '',
+    password1: 'caca32',
+    password2: 'caca32',
     country: 'España',
     addressPostalcode: '08004',
     addressCity: '',
     addressPhone: '111222333',
     addressPostalcodeInvoice: '',
     addressCityInvoice: '',
-    addressPhoneInvoice: ''
+    addressPhoneInvoice: '',
+    copyright: true,
+    option: false
   }
   submitData = formSubmitData => {
     console.log('formSubmitData ', formSubmitData)
@@ -27,15 +29,15 @@ class Prueba extends React.Component {
       const { valid, message_type } = params
       return !valid ? (
         <div style={{ color: 'tomato' }}>
-          {message_type ? message_type : `CustomInvalid`}
+          {message_type ? message_type : `$_customInvalidMessage`}
         </div>
       ) : (
         ''
       )
     }
     const SubmitButton = () => (
-      <button type="submit" variant="contained" className={`buttona`}>
-        Submita
+      <button type="submit" variant="contained" className={`c-submit-button`}>
+        $_customSubmit
       </button>
     )
 
@@ -45,6 +47,7 @@ class Prueba extends React.Component {
           formStructure={data.editFormStructure}
           id="register"
           formEdit={this.formEdit}
+          formTitle={`$_formTitle`}
           submit={this.submitData}
           Validation={Validation}
           SubmitButton={SubmitButton}
@@ -54,4 +57,4 @@ class Prueba extends React.Component {
     )
   }
 }
-export default Prueba
+export default Form

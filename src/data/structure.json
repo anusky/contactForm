@@ -2,6 +2,9 @@
   "editFormStructure": [
     {
       "name": "firstName",
+      "id": "firstName",
+      "title": "Nombre",
+      "titlePosition": 1,
       "type": "text",
       "mandatory": false,
       "placeholder": "",
@@ -9,6 +12,9 @@
     },
     {
       "name": "lastName",
+      "id": "lastName",
+      "title": "Apellido",
+      "titlePosition": 1,
       "type": "text",
       "mandatory": false,
       "placeholder": "",
@@ -16,6 +22,9 @@
     },
     {
       "name": "username",
+      "id": "username",
+      "title": "Nombre de usuario",
+      "titlePosition": 1,
       "type": "text",
       "mandatory": true,
       "placeholder": "",
@@ -23,6 +32,9 @@
     },
     {
       "name": "email",
+      "id": "email",
+      "title": "email",
+      "titlePosition": 1,
       "type": "email",
       "mandatory": true,
       "placeholder": "",
@@ -30,6 +42,9 @@
     },
     {
       "name": "password1",
+      "id": "password1",
+      "title": "Contraseña",
+      "titlePosition": 1,
       "type": "password",
       "mandatory": true,
       "placeholder": "",
@@ -37,6 +52,9 @@
     },
     {
       "name": "password2",
+      "id": "password2",
+      "title": "Repita Contraseña",
+      "titlePosition": 1,
       "type": "password",
       "mandatory": true,
       "placeholder": "",
@@ -46,6 +64,9 @@
     },
     {
       "name": "country",
+      "id": "country",
+      "title": "País",
+      "titlePosition": 1,
       "type": "select",
       "mandatory": true,
       "placeholder": "",
@@ -53,7 +74,20 @@
       "validation": []
     },
     {
+      "name": "addressPepito",
+      "id": "addressPepito",
+      "title": "Dirección",
+      "titlePosition": 1,
+      "type": "text",
+      "mandatory": true,
+      "placeholder": "",
+      "validation": []
+    },
+    {
       "name": "addressPostalcode",
+      "id": "addressPostalcode",
+      "title": "addressPostalcode",
+      "titlePosition": 1,
       "type": "number",
       "mandatory": true,
       "placeholder": "",
@@ -61,6 +95,9 @@
     },
     {
       "name": "addressCity",
+      "id": "addressCity",
+      "title": "addressCity",
+      "titlePosition": 1,
       "type": "text",
       "mandatory": false,
       "placeholder": "p.e: Barcelona",
@@ -68,6 +105,9 @@
     },
     {
       "name": "addressPhone",
+      "id": "addressPhone",
+      "title": "addressPhone",
+      "titlePosition": 1,
       "type": "text",
       "mandatory": false,
       "placeholder": "",
@@ -75,13 +115,20 @@
     },
     {
       "name": "copyAddress",
-      "type": "checkbox",
+      "id": "copyAddress",
+      "title": "copyAddress",
+      "titlePosition": 1,
+      "type": "checkbox-copy",
       "mandatory": false,
       "placeholder": "",
       "validation": []
     },
     {
       "name": "addressPostalcodeInvoice",
+      "id": "addressPostalcodeInvoice",
+      "copyOf": "addressPostalCode",
+      "title": "addressPostalcodeInvoice",
+      "titlePosition": 1,
       "type": "number",
       "mandatory": false,
       "placeholder": "",
@@ -93,6 +140,10 @@
     },
     {
       "name": "addressCityInvoice",
+      "id": "addressCityInvoice",
+      "copyOf": "addressCity",
+      "title": "addressCityInvoice",
+      "titlePosition": 1,
       "type": "text",
       "mandatory": false,
       "placeholder": "",
@@ -105,6 +156,10 @@
     },
     {
       "name": "addressPhoneInvoice",
+      "id": "addressPhoneInvoice",
+      "copyOf": "addressPhone",
+      "title": "addressPhoneInvoice",
+      "titlePosition": 1,
       "type": "text",
       "mandatory": false,
       "placeholder": "",
@@ -113,6 +168,39 @@
           "method": "telephone"
         }
       ]
+    },
+    {
+      "name": "copyright",
+      "id": "copyright",
+      "title": "Debe aceptar blablabla",
+      "titlePosition": -1,
+      "type": "checkbox",
+      "mandatory": true,
+      "placeholder": "",
+      "validation": []
+    },
+    {
+      "name": "option",
+      "id": "option_1",
+      "title": "optionHome",
+      "titlePosition": 1,
+      "type": "radio",
+      "options": [
+        {
+          "id": "option_1",
+          "title": "optionEasy",
+          "checked": true
+        },
+        {
+          "id": "option_2",
+          "title": "optionNotEasy",
+          "checked": false
+        }
+      ],
+      "mandatory": true,
+      "placeholder": "",
+      "checked": true,
+      "validation": []
     }
   ]
 }
