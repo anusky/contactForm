@@ -1,5 +1,5 @@
 ﻿Nyan!
-# Welcome to contactuserform! :shipit:
+# Welcome to contactuserform! :cow:
 
 intv-contactuserform is a React Component Library.
 It comes from the necessity of using custom InputFields on front-side forms.
@@ -7,13 +7,13 @@ Actually there's no stable version, that's why we don't use minimum @1.0.0.
 There are lot of testing and coverage to do. 
 
 
-# Installation
+# Installation :shipit:
 You can install it through yarn or npm.
 > yarn add intv-contactuserform
 > npm install intv-contactuserform
 
 
-## What you need to know
+## What you need to know :suspect:
 First thing you will need is a JSON structure with all inputs you want to use.
 >An example of it on [src/data/structure.json](src/data/structure.json)
 >
@@ -29,6 +29,11 @@ As a React component you should import **contactuserform** this way.
 
 There are many ways to use this library in case you want to customize your submit button or your validation messages. 
 You will find a simple example on [src/form.js](src/form.js)
+
+# Documentation [![Inline docs](http://inch-ci.org/github/anusky/contactForm.svg?branch=master)](http://inch-ci.org/github/anusky/contactForm)
+
+Its an important and necessary part of the development so this task is in progress. Hope next version can be more documented and tested.   
+:cow:
 
 # Versions and tasks
 `Actual version 0.0.4`
