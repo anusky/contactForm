@@ -126,7 +126,7 @@
     {
       "name": "addressPostalcodeInvoice",
       "id": "addressPostalcodeInvoice",
-      "copyOf": "addressPostalCode",
+      "copyOf": "addressPostalcode",
       "title": "addressPostalcodeInvoice",
       "titlePosition": 1,
       "type": "number",
@@ -180,9 +180,9 @@
       "validation": []
     },
     {
-      "name": "option",
+      "name": "optionHome",
       "id": "option_1",
-      "title": "optionHome",
+      "title": "optionHosdsdsdsme",
       "titlePosition": 1,
       "type": "radio",
       "options": [

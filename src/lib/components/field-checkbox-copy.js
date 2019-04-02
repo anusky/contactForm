@@ -32,7 +32,7 @@ class FieldCheckboxCopy extends Component {
         onBlur={this.props.handleOnBlur}
         placeholder={placeholder}
         value={value || this.state.value}
-        checked={value || this.state.value}
+        // checked={value || this.state.value}
         type="checkbox"
         name={name}
       />

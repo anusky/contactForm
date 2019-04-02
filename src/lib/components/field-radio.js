@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class FieldRadio extends Component {
   static defaultProps = {
@@ -12,13 +12,12 @@ class FieldRadio extends Component {
     validation: <div />,
     handleChange: () => {},
     handleValidate: () => {}
-  }
+  };
 
-  state = {}
+  state = {};
 
   render() {
-    const { name, title, error, id } = this.props
-    console.log('id ', id)
+    const { name, title, error, id } = this.props;
     return (
       <label className="c-fieldradio">
         {name}
@@ -32,8 +31,8 @@ class FieldRadio extends Component {
           name={title}
         />
       </label>
-    )
+    );
   }
 }
 
-export default FieldRadio
+export default FieldRadio;

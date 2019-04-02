@@ -24,8 +24,7 @@ class UserForm extends Component {
             withwho: PropTypes.string,
             withValue: PropTypes.string
           })
-        ).isRequired,
-        options: PropTypes.arrayOf(PropTypes.string)
+        ).isRequired
       })
     ).isRequired,
     formEdit: PropTypes.object,
@@ -140,13 +139,7 @@ class UserForm extends Component {
 
   handleGenericChange = ({ value, name }) => {
     let formAux = this.state.form;
-    if (
-      name.indexOf('address') !== -1 &&
-      name.indexOf('Invoice') === -1 &&
-      this.state.form.copyAddress
-    ) {
-      formAux = { ...formAux, [`${name}Invoice`]: value };
-    }
+
     formAux = { ...formAux, [name]: value };
     const formError = { ...this.state.error, [name]: false },
       formValidated = { ...this.state.validated, [name]: true };
@@ -168,12 +161,10 @@ class UserForm extends Component {
     });
   };
   handleRadioChange = ({ name, id }) => {
-    console.log('radio data name: ', name, ' id: ', id);
     let formAux = this.state.form;
     formAux = { ...formAux, [name]: id };
     const formError = { ...this.state.error, [name]: false },
       formValidated = { ...this.state.validated, [name]: true };
-    console.log('como ha quedado el formulario ', formAux);
     this.setState({
       form: formAux,
       error: formError,
@@ -182,7 +173,6 @@ class UserForm extends Component {
   };
 
   handleChange = (event, type, { name, value, checked, id } = event.target) => {
-    console.log(`${name} ${value} ${checked} ${id} ${type}`);
     switch (type) {
       case 'checkbox-copy':
         this.handleCopyChange(checked, name);
@@ -212,7 +202,6 @@ class UserForm extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    console.log('que esta pasando');
     let stateErrorAux = this.state.error,
       sendData = true;
 
@@ -231,10 +220,8 @@ class UserForm extends Component {
         sendData = sendData && !stateErrorAux[el];
       }
     } catch (err) {
-      console.log('que pasa con error ', err);
+      console.log('Error trying to submit data ', err);
     }
-    console.log('this.state.form ', this.state.form);
-    console.log('stateErrorAux ', stateErrorAux);
     this.setState({ error: stateErrorAux }, () => {
       if (sendData) {
         this.props.submit(this.state.form);
@@ -242,27 +229,18 @@ class UserForm extends Component {
     });
   };
 
-  //copyAddress
+  /**
+   * handlecopychange
+   * @param checked - control if the checkbox-copy is or not checked
+   * @param name - name of inputField given by structure.json
+   */
   handleCopyChange = (checked, name) => {
     let formAux = this.state.form;
     this.props.formStructure
       .filter(el => el.copyOf)
       .forEach(el => {
-        // formAux = {
-        //   ...formAux,
-        //   [el.name]: checked ? this.state.form[el.copyOf] : '',
-        //   [name]: checked
-        // };
-        formAux[el.name] = checked ? this.state.form[el.copyOf] : '';
-        formAux[name] = checked;
-        console.log('formAux ', formAux);
+        formAux[el.id] = checked ? formAux[el.copyOf] : '';
       });
-    // this.setState({ form: formAux }, () => {
-    //   console.log('state now? ', this.state);
-    // });
-
-    // let formAux = this.state.form;
-    // formAux = { ...formAux, [name]: checked };
     const formError = { ...this.state.error, [name]: false },
       formValidated = { ...this.state.validated, [name]: true };
     this.setState({

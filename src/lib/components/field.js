@@ -48,7 +48,7 @@ class Field extends Component {
             handleChange={this.handleChange}
             checked={el.checked}
             name={el.title}
-            title={title}
+            title={name}
             id={el.id}
             error={error}
           />
