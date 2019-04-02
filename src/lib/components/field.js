@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import FieldSelect from './field-select';
+import FieldRadio from './field-radio';
+import FieldCheckboxCopy from './field-checkbox-copy';
 
 class Field extends Component {
   static defaultProps = {
     name: 'exampleName',
+    id: 'exampleId',
+    checked: false,
     title: 'exampleTitle',
     titlePosition: 1,
     type: 'text',
@@ -15,6 +20,10 @@ class Field extends Component {
 
   state = {
     value: ''
+  };
+
+  handleChange = event => {
+    this.props.handleChange(event, this.props.type);
   };
 
   render() {
@@ -29,35 +38,59 @@ class Field extends Component {
       placeholder,
       validation
     } = this.props;
-    return (
-      <label htmlFor={name} key={name}>
-        {titlePosition === 1 && title}
-        {type === 'select' && (
-          <select
-            className={`input- ${error ? `input__error` : ``}`}
-            onChange={this.props.handleChange}
-            onBlur={this.props.handleChange}
-            value={value || this.state.value}
+
+    let InputField;
+    switch (this.props.type) {
+      case 'radio':
+        InputField = options.map(el => (
+          <FieldRadio
+            key={el.id}
+            handleChange={this.handleChange}
+            checked={el.checked}
+            name={el.title}
+            title={name}
+            id={el.id}
+            error={error}
+          />
+        ));
+        break;
+      case 'select':
+        InputField = (
+          <FieldSelect
+            handleChange={this.handleChange}
+            options={options}
             name={name}
-          >
-            {options.map((option, key) => (
-              <option key={option} value={option}>
-                {option}
-              </option>
-            ))}
-          </select>
-        )}
-        {type !== 'select' && (
+            error={error}
+          />
+        );
+        break;
+      case 'checkbox-copy':
+        InputField = (
+          <FieldCheckboxCopy
+            handleChange={this.handleChange}
+            name={name}
+            error={error}
+          />
+        );
+        break;
+      default:
+        InputField = (
           <input
             className={`input__${name} ${error ? `input__error` : ``}`}
-            onChange={this.props.handleChange}
+            onChange={this.handleChange}
             onBlur={this.props.handleOnBlur}
             placeholder={placeholder}
             value={value || this.state.value}
+            checked={value || this.state.value}
             type={type}
             name={name}
           />
-        )}
+        );
+    }
+    return (
+      <label htmlFor={name} key={name}>
+        {titlePosition === 1 && title}
+        {InputField}
         {titlePosition === -1 && title}
         {validation}
       </label>
