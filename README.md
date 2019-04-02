@@ -30,6 +30,9 @@ As a React component you should import **contactuserform** this way.
 There are many ways to use this library in case you want to customize your submit button or your validation messages. 
 You will find a simple example on [src/form.js](src/form.js)
 
+### See some examples of how you can use it 
+Codesandbox [ intv-contactuserform-examples](https://codesandbox.io/s/7jm92rmlm6)
+
 # Documentation [![Inline docs](http://inch-ci.org/github/anusky/contactForm.svg?branch=master)](http://inch-ci.org/github/anusky/contactForm)
 
 Its an important and necessary part of the development so this task is in progress. Hope next version can be more documented and tested.   
