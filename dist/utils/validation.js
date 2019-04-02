@@ -20,7 +20,7 @@ const validationEqualLength = ({
 const validationMandatory = ({
   value,
   mandatory = false
-}) => mandatory ? value.length > 0 : true; //equal comparison
+}) => typeof value === 'boolean' ? value : mandatory ? value.length > 0 : true; //equal comparison
 
 
 const validationComparison = ({

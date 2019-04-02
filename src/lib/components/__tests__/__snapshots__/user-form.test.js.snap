@@ -1,0 +1,1999 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserForm renders without problems  renders correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <UserForm
+    SubmitButton={[Function]}
+    SubmitButtonText="enviar"
+    Validation={[Function]}
+    formStructure={
+      Array [
+        Object {
+          "id": "firstName",
+          "mandatory": false,
+          "name": "firstName",
+          "placeholder": "",
+          "title": "Nombre",
+          "titlePosition": 1,
+          "type": "text",
+          "validation": Array [
+            Object {
+              "length": 8,
+              "method": "maxlength",
+            },
+          ],
+        },
+        Object {
+          "id": "lastName",
+          "mandatory": false,
+          "name": "lastName",
+          "placeholder": "",
+          "title": "Apellido",
+          "titlePosition": 1,
+          "type": "text",
+          "validation": Array [
+            Object {
+              "length": 8,
+              "method": "maxlength",
+            },
+          ],
+        },
+        Object {
+          "id": "username",
+          "mandatory": true,
+          "name": "username",
+          "placeholder": "",
+          "title": "Nombre de usuario",
+          "titlePosition": 1,
+          "type": "text",
+          "validation": Array [
+            Object {
+              "length": 8,
+              "method": "maxlength",
+            },
+          ],
+        },
+        Object {
+          "id": "email",
+          "mandatory": true,
+          "name": "email",
+          "placeholder": "",
+          "title": "email",
+          "titlePosition": 1,
+          "type": "email",
+          "validation": Array [
+            Object {
+              "method": "email",
+            },
+          ],
+        },
+        Object {
+          "id": "password1",
+          "mandatory": true,
+          "name": "password1",
+          "placeholder": "",
+          "title": "Contraseña",
+          "titlePosition": 1,
+          "type": "password",
+          "validation": Array [
+            Object {
+              "method": "password",
+            },
+          ],
+        },
+        Object {
+          "id": "password2",
+          "mandatory": true,
+          "name": "password2",
+          "placeholder": "",
+          "title": "Repita Contraseña",
+          "titlePosition": 1,
+          "type": "password",
+          "validation": Array [
+            Object {
+              "method": "comparison",
+              "withValue": "",
+              "withwho": "password1",
+            },
+          ],
+        },
+        Object {
+          "id": "country",
+          "mandatory": true,
+          "name": "country",
+          "options": Array [
+            "España",
+            "Inglaterra",
+          ],
+          "placeholder": "",
+          "title": "País",
+          "titlePosition": 1,
+          "type": "select",
+          "validation": Array [],
+        },
+        Object {
+          "id": "addressPepito",
+          "mandatory": true,
+          "name": "addressPepito",
+          "placeholder": "",
+          "title": "Dirección",
+          "titlePosition": 1,
+          "type": "text",
+          "validation": Array [],
+        },
+        Object {
+          "id": "addressPostalcode",
+          "mandatory": true,
+          "name": "addressPostalcode",
+          "placeholder": "",
+          "title": "addressPostalcode",
+          "titlePosition": 1,
+          "type": "number",
+          "validation": Array [
+            Object {
+              "method": "postalcode",
+            },
+          ],
+        },
+        Object {
+          "id": "addressCity",
+          "mandatory": false,
+          "name": "addressCity",
+          "placeholder": "p.e: Barcelona",
+          "title": "addressCity",
+          "titlePosition": 1,
+          "type": "text",
+          "validation": Array [
+            Object {
+              "length": 30,
+              "method": "maxlength",
+            },
+          ],
+        },
+        Object {
+          "id": "addressPhone",
+          "mandatory": false,
+          "name": "addressPhone",
+          "placeholder": "",
+          "title": "addressPhone",
+          "titlePosition": 1,
+          "type": "text",
+          "validation": Array [
+            Object {
+              "method": "telephone",
+            },
+          ],
+        },
+        Object {
+          "id": "copyAddress",
+          "mandatory": false,
+          "name": "copyAddress",
+          "placeholder": "",
+          "title": "copyAddress",
+          "titlePosition": 1,
+          "type": "checkbox-copy",
+          "validation": Array [],
+        },
+        Object {
+          "copyOf": "addressPostalcode",
+          "id": "addressPostalcodeInvoice",
+          "mandatory": false,
+          "name": "addressPostalcodeInvoice",
+          "placeholder": "",
+          "title": "addressPostalcodeInvoice",
+          "titlePosition": 1,
+          "type": "number",
+          "validation": Array [
+            Object {
+              "method": "postalcode",
+            },
+          ],
+        },
+        Object {
+          "copyOf": "addressCity",
+          "id": "addressCityInvoice",
+          "mandatory": false,
+          "name": "addressCityInvoice",
+          "placeholder": "",
+          "title": "addressCityInvoice",
+          "titlePosition": 1,
+          "type": "text",
+          "validation": Array [
+            Object {
+              "length": 30,
+              "method": "maxlength",
+            },
+          ],
+        },
+        Object {
+          "copyOf": "addressPhone",
+          "id": "addressPhoneInvoice",
+          "mandatory": false,
+          "name": "addressPhoneInvoice",
+          "placeholder": "",
+          "title": "addressPhoneInvoice",
+          "titlePosition": 1,
+          "type": "text",
+          "validation": Array [
+            Object {
+              "method": "telephone",
+            },
+          ],
+        },
+        Object {
+          "id": "copyright",
+          "mandatory": true,
+          "name": "copyright",
+          "placeholder": "",
+          "title": "Debe aceptar blablabla",
+          "titlePosition": -1,
+          "type": "checkbox",
+          "validation": Array [],
+        },
+        Object {
+          "checked": true,
+          "id": "option_1",
+          "mandatory": true,
+          "name": "optionHome",
+          "options": Array [
+            Object {
+              "checked": true,
+              "id": "option_1",
+              "title": "optionEasy",
+            },
+            Object {
+              "checked": false,
+              "id": "option_2",
+              "title": "optionNotEasy",
+            },
+          ],
+          "placeholder": "",
+          "title": "optionHosdsdsdsme",
+          "titlePosition": 1,
+          "type": "radio",
+          "validation": Array [],
+        },
+      ]
+    }
+    formTitle=""
+    id="register"
+    submit={[Function]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h3>
+           
+          
+           
+        </h3>,
+        Array [
+          <Field
+            checked={false}
+            error={false}
+            handleChange={[Function]}
+            handleOnBlur={[Function]}
+            handleValidate={[Function]}
+            id="firstName"
+            name="firstName"
+            placeholder=""
+            title="Nombre"
+            titlePosition={1}
+            type="text"
+            validation={
+              <Validation
+                valid={true}
+              />
+            }
+            value=""
+          />,
+          <Field
+            checked={false}
+            error={false}
+            handleChange={[Function]}
+            handleOnBlur={[Function]}
+            handleValidate={[Function]}
+            id="lastName"
+            name="lastName"
+            placeholder=""
+            title="Apellido"
+            titlePosition={1}
+            type="text"
+            validation={
+              <Validation
+                valid={true}
+              />
+            }
+            value=""
+          />,
+          <Field
+            checked={false}
+            error={false}
+            handleChange={[Function]}
+            handleOnBlur={[Function]}
+            handleValidate={[Function]}
+            id="username"
+            name="username"
+            placeholder=""
+            title="Nombre de usuario"
+            titlePosition={1}
+            type="text"
+            validation={
+              <Validation
+                valid={true}
+              />
+            }
+            value=""
+          />,
+          <Field
+            checked={false}
+            error={false}
+            handleChange={[Function]}
+            handleOnBlur={[Function]}
+            handleValidate={[Function]}
+            id="email"
+            name="email"
+            placeholder=""
+            title="email"
+            titlePosition={1}
+            type="email"
+            validation={
+              <Validation
+                valid={true}
+              />
+            }
+            value=""
+          />,
+          <Field
+            checked={false}
+            error={false}
+            handleChange={[Function]}
+            handleOnBlur={[Function]}
+            handleValidate={[Function]}
+            id="password1"
+            name="password1"
+            placeholder=""
+            title="Contraseña"
+            titlePosition={1}
+            type="password"
+            validation={
+              <Validation
+                valid={true}
+              />
+            }
+            value=""
+          />,
+          <Field
+            checked={false}
+            error={false}
+            handleChange={[Function]}
+            handleOnBlur={[Function]}
+            handleValidate={[Function]}
+            id="password2"
+            name="password2"
+            placeholder=""
+            title="Repita Contraseña"
+            titlePosition={1}
+            type="password"
+            validation={
+              <Validation
+                valid={true}
+              />
+            }
+            value=""
+          />,
+          <Field
+            checked={false}
+            error={false}
+            handleChange={[Function]}
+            handleOnBlur={[Function]}
+            handleValidate={[Function]}
+            id="country"
+            name="country"
+            options={
+              Array [
+                "España",
+                "Inglaterra",
+              ]
+            }
+            placeholder=""
+            title="País"
+            titlePosition={1}
+            type="select"
+            validation={
+              <Validation
+                valid={true}
+              />
+            }
+            value=""
+          />,
+          <Field
+            checked={false}
+            error={false}
+            handleChange={[Function]}
+            handleOnBlur={[Function]}
+            handleValidate={[Function]}
+            id="addressPepito"
+            name="addressPepito"
+            placeholder=""
+            title="Dirección"
+            titlePosition={1}
+            type="text"
+            validation={
+              <Validation
+                valid={true}
+              />
+            }
+            value=""
+          />,
+          <Field
+            checked={false}
+            error={false}
+            handleChange={[Function]}
+            handleOnBlur={[Function]}
+            handleValidate={[Function]}
+            id="addressPostalcode"
+            name="addressPostalcode"
+            placeholder=""
+            title="addressPostalcode"
+            titlePosition={1}
+            type="number"
+            validation={
+              <Validation
+                valid={true}
+              />
+            }
+            value=""
+          />,
+          <Field
+            checked={false}
+            error={false}
+            handleChange={[Function]}
+            handleOnBlur={[Function]}
+            handleValidate={[Function]}
+            id="addressCity"
+            name="addressCity"
+            placeholder="p.e: Barcelona"
+            title="addressCity"
+            titlePosition={1}
+            type="text"
+            validation={
+              <Validation
+                valid={true}
+              />
+            }
+            value=""
+          />,
+          <Field
+            checked={false}
+            error={false}
+            handleChange={[Function]}
+            handleOnBlur={[Function]}
+            handleValidate={[Function]}
+            id="addressPhone"
+            name="addressPhone"
+            placeholder=""
+            title="addressPhone"
+            titlePosition={1}
+            type="text"
+            validation={
+              <Validation
+                valid={true}
+              />
+            }
+            value=""
+          />,
+          <Field
+            checked={false}
+            error={false}
+            handleChange={[Function]}
+            handleOnBlur={[Function]}
+            handleValidate={[Function]}
+            id="copyAddress"
+            name="copyAddress"
+            placeholder=""
+            title="copyAddress"
+            titlePosition={1}
+            type="checkbox-copy"
+            validation={
+              <Validation
+                valid={true}
+              />
+            }
+            value=""
+          />,
+          <Field
+            checked={false}
+            error={false}
+            handleChange={[Function]}
+            handleOnBlur={[Function]}
+            handleValidate={[Function]}
+            id="addressPostalcodeInvoice"
+            name="addressPostalcodeInvoice"
+            placeholder=""
+            title="addressPostalcodeInvoice"
+            titlePosition={1}
+            type="number"
+            validation={
+              <Validation
+                valid={true}
+              />
+            }
+            value=""
+          />,
+          <Field
+            checked={false}
+            error={false}
+            handleChange={[Function]}
+            handleOnBlur={[Function]}
+            handleValidate={[Function]}
+            id="addressCityInvoice"
+            name="addressCityInvoice"
+            placeholder=""
+            title="addressCityInvoice"
+            titlePosition={1}
+            type="text"
+            validation={
+              <Validation
+                valid={true}
+              />
+            }
+            value=""
+          />,
+          <Field
+            checked={false}
+            error={false}
+            handleChange={[Function]}
+            handleOnBlur={[Function]}
+            handleValidate={[Function]}
+            id="addressPhoneInvoice"
+            name="addressPhoneInvoice"
+            placeholder=""
+            title="addressPhoneInvoice"
+            titlePosition={1}
+            type="text"
+            validation={
+              <Validation
+                valid={true}
+              />
+            }
+            value=""
+          />,
+          <Field
+            checked={false}
+            error={false}
+            handleChange={[Function]}
+            handleOnBlur={[Function]}
+            handleValidate={[Function]}
+            id="copyright"
+            name="copyright"
+            placeholder=""
+            title="Debe aceptar blablabla"
+            titlePosition={-1}
+            type="checkbox"
+            validation={
+              <Validation
+                valid={true}
+              />
+            }
+            value=""
+          />,
+          <Field
+            checked={true}
+            error={false}
+            handleChange={[Function]}
+            handleOnBlur={[Function]}
+            handleValidate={[Function]}
+            id="option_1"
+            name="optionHome"
+            options={
+              Array [
+                Object {
+                  "checked": true,
+                  "id": "option_1",
+                  "title": "optionEasy",
+                },
+                Object {
+                  "checked": false,
+                  "id": "option_2",
+                  "title": "optionNotEasy",
+                },
+              ]
+            }
+            placeholder=""
+            title="optionHosdsdsdsme"
+            titlePosition={1}
+            type="radio"
+            validation={
+              <Validation
+                valid={true}
+              />
+            }
+            value=""
+          />,
+        ],
+        <SubmitButton
+          text="enviar"
+        />,
+      ],
+      "className": "c-userform",
+      "onSubmit": [Function],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            " ",
+            "",
+            " ",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          " ",
+          "",
+          " ",
+        ],
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": "firstName",
+        "nodeType": "class",
+        "props": Object {
+          "checked": false,
+          "error": false,
+          "handleChange": [Function],
+          "handleOnBlur": [Function],
+          "handleValidate": [Function],
+          "id": "firstName",
+          "name": "firstName",
+          "options": undefined,
+          "placeholder": "",
+          "title": "Nombre",
+          "titlePosition": 1,
+          "type": "text",
+          "validation": <Validation
+            valid={true}
+          />,
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "lastName",
+        "nodeType": "class",
+        "props": Object {
+          "checked": false,
+          "error": false,
+          "handleChange": [Function],
+          "handleOnBlur": [Function],
+          "handleValidate": [Function],
+          "id": "lastName",
+          "name": "lastName",
+          "options": undefined,
+          "placeholder": "",
+          "title": "Apellido",
+          "titlePosition": 1,
+          "type": "text",
+          "validation": <Validation
+            valid={true}
+          />,
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "username",
+        "nodeType": "class",
+        "props": Object {
+          "checked": false,
+          "error": false,
+          "handleChange": [Function],
+          "handleOnBlur": [Function],
+          "handleValidate": [Function],
+          "id": "username",
+          "name": "username",
+          "options": undefined,
+          "placeholder": "",
+          "title": "Nombre de usuario",
+          "titlePosition": 1,
+          "type": "text",
+          "validation": <Validation
+            valid={true}
+          />,
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "email",
+        "nodeType": "class",
+        "props": Object {
+          "checked": false,
+          "error": false,
+          "handleChange": [Function],
+          "handleOnBlur": [Function],
+          "handleValidate": [Function],
+          "id": "email",
+          "name": "email",
+          "options": undefined,
+          "placeholder": "",
+          "title": "email",
+          "titlePosition": 1,
+          "type": "email",
+          "validation": <Validation
+            valid={true}
+          />,
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "password1",
+        "nodeType": "class",
+        "props": Object {
+          "checked": false,
+          "error": false,
+          "handleChange": [Function],
+          "handleOnBlur": [Function],
+          "handleValidate": [Function],
+          "id": "password1",
+          "name": "password1",
+          "options": undefined,
+          "placeholder": "",
+          "title": "Contraseña",
+          "titlePosition": 1,
+          "type": "password",
+          "validation": <Validation
+            valid={true}
+          />,
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "password2",
+        "nodeType": "class",
+        "props": Object {
+          "checked": false,
+          "error": false,
+          "handleChange": [Function],
+          "handleOnBlur": [Function],
+          "handleValidate": [Function],
+          "id": "password2",
+          "name": "password2",
+          "options": undefined,
+          "placeholder": "",
+          "title": "Repita Contraseña",
+          "titlePosition": 1,
+          "type": "password",
+          "validation": <Validation
+            valid={true}
+          />,
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "country",
+        "nodeType": "class",
+        "props": Object {
+          "checked": false,
+          "error": false,
+          "handleChange": [Function],
+          "handleOnBlur": [Function],
+          "handleValidate": [Function],
+          "id": "country",
+          "name": "country",
+          "options": Array [
+            "España",
+            "Inglaterra",
+          ],
+          "placeholder": "",
+          "title": "País",
+          "titlePosition": 1,
+          "type": "select",
+          "validation": <Validation
+            valid={true}
+          />,
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "addressPepito",
+        "nodeType": "class",
+        "props": Object {
+          "checked": false,
+          "error": false,
+          "handleChange": [Function],
+          "handleOnBlur": [Function],
+          "handleValidate": [Function],
+          "id": "addressPepito",
+          "name": "addressPepito",
+          "options": undefined,
+          "placeholder": "",
+          "title": "Dirección",
+          "titlePosition": 1,
+          "type": "text",
+          "validation": <Validation
+            valid={true}
+          />,
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "addressPostalcode",
+        "nodeType": "class",
+        "props": Object {
+          "checked": false,
+          "error": false,
+          "handleChange": [Function],
+          "handleOnBlur": [Function],
+          "handleValidate": [Function],
+          "id": "addressPostalcode",
+          "name": "addressPostalcode",
+          "options": undefined,
+          "placeholder": "",
+          "title": "addressPostalcode",
+          "titlePosition": 1,
+          "type": "number",
+          "validation": <Validation
+            valid={true}
+          />,
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "addressCity",
+        "nodeType": "class",
+        "props": Object {
+          "checked": false,
+          "error": false,
+          "handleChange": [Function],
+          "handleOnBlur": [Function],
+          "handleValidate": [Function],
+          "id": "addressCity",
+          "name": "addressCity",
+          "options": undefined,
+          "placeholder": "p.e: Barcelona",
+          "title": "addressCity",
+          "titlePosition": 1,
+          "type": "text",
+          "validation": <Validation
+            valid={true}
+          />,
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "addressPhone",
+        "nodeType": "class",
+        "props": Object {
+          "checked": false,
+          "error": false,
+          "handleChange": [Function],
+          "handleOnBlur": [Function],
+          "handleValidate": [Function],
+          "id": "addressPhone",
+          "name": "addressPhone",
+          "options": undefined,
+          "placeholder": "",
+          "title": "addressPhone",
+          "titlePosition": 1,
+          "type": "text",
+          "validation": <Validation
+            valid={true}
+          />,
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "copyAddress",
+        "nodeType": "class",
+        "props": Object {
+          "checked": false,
+          "error": false,
+          "handleChange": [Function],
+          "handleOnBlur": [Function],
+          "handleValidate": [Function],
+          "id": "copyAddress",
+          "name": "copyAddress",
+          "options": undefined,
+          "placeholder": "",
+          "title": "copyAddress",
+          "titlePosition": 1,
+          "type": "checkbox-copy",
+          "validation": <Validation
+            valid={true}
+          />,
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "addressPostalcodeInvoice",
+        "nodeType": "class",
+        "props": Object {
+          "checked": false,
+          "error": false,
+          "handleChange": [Function],
+          "handleOnBlur": [Function],
+          "handleValidate": [Function],
+          "id": "addressPostalcodeInvoice",
+          "name": "addressPostalcodeInvoice",
+          "options": undefined,
+          "placeholder": "",
+          "title": "addressPostalcodeInvoice",
+          "titlePosition": 1,
+          "type": "number",
+          "validation": <Validation
+            valid={true}
+          />,
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "addressCityInvoice",
+        "nodeType": "class",
+        "props": Object {
+          "checked": false,
+          "error": false,
+          "handleChange": [Function],
+          "handleOnBlur": [Function],
+          "handleValidate": [Function],
+          "id": "addressCityInvoice",
+          "name": "addressCityInvoice",
+          "options": undefined,
+          "placeholder": "",
+          "title": "addressCityInvoice",
+          "titlePosition": 1,
+          "type": "text",
+          "validation": <Validation
+            valid={true}
+          />,
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "addressPhoneInvoice",
+        "nodeType": "class",
+        "props": Object {
+          "checked": false,
+          "error": false,
+          "handleChange": [Function],
+          "handleOnBlur": [Function],
+          "handleValidate": [Function],
+          "id": "addressPhoneInvoice",
+          "name": "addressPhoneInvoice",
+          "options": undefined,
+          "placeholder": "",
+          "title": "addressPhoneInvoice",
+          "titlePosition": 1,
+          "type": "text",
+          "validation": <Validation
+            valid={true}
+          />,
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "copyright",
+        "nodeType": "class",
+        "props": Object {
+          "checked": false,
+          "error": false,
+          "handleChange": [Function],
+          "handleOnBlur": [Function],
+          "handleValidate": [Function],
+          "id": "copyright",
+          "name": "copyright",
+          "options": undefined,
+          "placeholder": "",
+          "title": "Debe aceptar blablabla",
+          "titlePosition": -1,
+          "type": "checkbox",
+          "validation": <Validation
+            valid={true}
+          />,
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "option_1",
+        "nodeType": "class",
+        "props": Object {
+          "checked": true,
+          "error": false,
+          "handleChange": [Function],
+          "handleOnBlur": [Function],
+          "handleValidate": [Function],
+          "id": "option_1",
+          "name": "optionHome",
+          "options": Array [
+            Object {
+              "checked": true,
+              "id": "option_1",
+              "title": "optionEasy",
+            },
+            Object {
+              "checked": false,
+              "id": "option_2",
+              "title": "optionNotEasy",
+            },
+          ],
+          "placeholder": "",
+          "title": "optionHosdsdsdsme",
+          "titlePosition": 1,
+          "type": "radio",
+          "validation": <Validation
+            valid={true}
+          />,
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "text": "enviar",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "form",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h3>
+             
+            
+             
+          </h3>,
+          Array [
+            <Field
+              checked={false}
+              error={false}
+              handleChange={[Function]}
+              handleOnBlur={[Function]}
+              handleValidate={[Function]}
+              id="firstName"
+              name="firstName"
+              placeholder=""
+              title="Nombre"
+              titlePosition={1}
+              type="text"
+              validation={
+                <Validation
+                  valid={true}
+                />
+              }
+              value=""
+            />,
+            <Field
+              checked={false}
+              error={false}
+              handleChange={[Function]}
+              handleOnBlur={[Function]}
+              handleValidate={[Function]}
+              id="lastName"
+              name="lastName"
+              placeholder=""
+              title="Apellido"
+              titlePosition={1}
+              type="text"
+              validation={
+                <Validation
+                  valid={true}
+                />
+              }
+              value=""
+            />,
+            <Field
+              checked={false}
+              error={false}
+              handleChange={[Function]}
+              handleOnBlur={[Function]}
+              handleValidate={[Function]}
+              id="username"
+              name="username"
+              placeholder=""
+              title="Nombre de usuario"
+              titlePosition={1}
+              type="text"
+              validation={
+                <Validation
+                  valid={true}
+                />
+              }
+              value=""
+            />,
+            <Field
+              checked={false}
+              error={false}
+              handleChange={[Function]}
+              handleOnBlur={[Function]}
+              handleValidate={[Function]}
+              id="email"
+              name="email"
+              placeholder=""
+              title="email"
+              titlePosition={1}
+              type="email"
+              validation={
+                <Validation
+                  valid={true}
+                />
+              }
+              value=""
+            />,
+            <Field
+              checked={false}
+              error={false}
+              handleChange={[Function]}
+              handleOnBlur={[Function]}
+              handleValidate={[Function]}
+              id="password1"
+              name="password1"
+              placeholder=""
+              title="Contraseña"
+              titlePosition={1}
+              type="password"
+              validation={
+                <Validation
+                  valid={true}
+                />
+              }
+              value=""
+            />,
+            <Field
+              checked={false}
+              error={false}
+              handleChange={[Function]}
+              handleOnBlur={[Function]}
+              handleValidate={[Function]}
+              id="password2"
+              name="password2"
+              placeholder=""
+              title="Repita Contraseña"
+              titlePosition={1}
+              type="password"
+              validation={
+                <Validation
+                  valid={true}
+                />
+              }
+              value=""
+            />,
+            <Field
+              checked={false}
+              error={false}
+              handleChange={[Function]}
+              handleOnBlur={[Function]}
+              handleValidate={[Function]}
+              id="country"
+              name="country"
+              options={
+                Array [
+                  "España",
+                  "Inglaterra",
+                ]
+              }
+              placeholder=""
+              title="País"
+              titlePosition={1}
+              type="select"
+              validation={
+                <Validation
+                  valid={true}
+                />
+              }
+              value=""
+            />,
+            <Field
+              checked={false}
+              error={false}
+              handleChange={[Function]}
+              handleOnBlur={[Function]}
+              handleValidate={[Function]}
+              id="addressPepito"
+              name="addressPepito"
+              placeholder=""
+              title="Dirección"
+              titlePosition={1}
+              type="text"
+              validation={
+                <Validation
+                  valid={true}
+                />
+              }
+              value=""
+            />,
+            <Field
+              checked={false}
+              error={false}
+              handleChange={[Function]}
+              handleOnBlur={[Function]}
+              handleValidate={[Function]}
+              id="addressPostalcode"
+              name="addressPostalcode"
+              placeholder=""
+              title="addressPostalcode"
+              titlePosition={1}
+              type="number"
+              validation={
+                <Validation
+                  valid={true}
+                />
+              }
+              value=""
+            />,
+            <Field
+              checked={false}
+              error={false}
+              handleChange={[Function]}
+              handleOnBlur={[Function]}
+              handleValidate={[Function]}
+              id="addressCity"
+              name="addressCity"
+              placeholder="p.e: Barcelona"
+              title="addressCity"
+              titlePosition={1}
+              type="text"
+              validation={
+                <Validation
+                  valid={true}
+                />
+              }
+              value=""
+            />,
+            <Field
+              checked={false}
+              error={false}
+              handleChange={[Function]}
+              handleOnBlur={[Function]}
+              handleValidate={[Function]}
+              id="addressPhone"
+              name="addressPhone"
+              placeholder=""
+              title="addressPhone"
+              titlePosition={1}
+              type="text"
+              validation={
+                <Validation
+                  valid={true}
+                />
+              }
+              value=""
+            />,
+            <Field
+              checked={false}
+              error={false}
+              handleChange={[Function]}
+              handleOnBlur={[Function]}
+              handleValidate={[Function]}
+              id="copyAddress"
+              name="copyAddress"
+              placeholder=""
+              title="copyAddress"
+              titlePosition={1}
+              type="checkbox-copy"
+              validation={
+                <Validation
+                  valid={true}
+                />
+              }
+              value=""
+            />,
+            <Field
+              checked={false}
+              error={false}
+              handleChange={[Function]}
+              handleOnBlur={[Function]}
+              handleValidate={[Function]}
+              id="addressPostalcodeInvoice"
+              name="addressPostalcodeInvoice"
+              placeholder=""
+              title="addressPostalcodeInvoice"
+              titlePosition={1}
+              type="number"
+              validation={
+                <Validation
+                  valid={true}
+                />
+              }
+              value=""
+            />,
+            <Field
+              checked={false}
+              error={false}
+              handleChange={[Function]}
+              handleOnBlur={[Function]}
+              handleValidate={[Function]}
+              id="addressCityInvoice"
+              name="addressCityInvoice"
+              placeholder=""
+              title="addressCityInvoice"
+              titlePosition={1}
+              type="text"
+              validation={
+                <Validation
+                  valid={true}
+                />
+              }
+              value=""
+            />,
+            <Field
+              checked={false}
+              error={false}
+              handleChange={[Function]}
+              handleOnBlur={[Function]}
+              handleValidate={[Function]}
+              id="addressPhoneInvoice"
+              name="addressPhoneInvoice"
+              placeholder=""
+              title="addressPhoneInvoice"
+              titlePosition={1}
+              type="text"
+              validation={
+                <Validation
+                  valid={true}
+                />
+              }
+              value=""
+            />,
+            <Field
+              checked={false}
+              error={false}
+              handleChange={[Function]}
+              handleOnBlur={[Function]}
+              handleValidate={[Function]}
+              id="copyright"
+              name="copyright"
+              placeholder=""
+              title="Debe aceptar blablabla"
+              titlePosition={-1}
+              type="checkbox"
+              validation={
+                <Validation
+                  valid={true}
+                />
+              }
+              value=""
+            />,
+            <Field
+              checked={true}
+              error={false}
+              handleChange={[Function]}
+              handleOnBlur={[Function]}
+              handleValidate={[Function]}
+              id="option_1"
+              name="optionHome"
+              options={
+                Array [
+                  Object {
+                    "checked": true,
+                    "id": "option_1",
+                    "title": "optionEasy",
+                  },
+                  Object {
+                    "checked": false,
+                    "id": "option_2",
+                    "title": "optionNotEasy",
+                  },
+                ]
+              }
+              placeholder=""
+              title="optionHosdsdsdsme"
+              titlePosition={1}
+              type="radio"
+              validation={
+                <Validation
+                  valid={true}
+                />
+              }
+              value=""
+            />,
+          ],
+          <SubmitButton
+            text="enviar"
+          />,
+        ],
+        "className": "c-userform",
+        "onSubmit": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              " ",
+              "",
+              " ",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            " ",
+            "",
+            " ",
+          ],
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": "firstName",
+          "nodeType": "class",
+          "props": Object {
+            "checked": false,
+            "error": false,
+            "handleChange": [Function],
+            "handleOnBlur": [Function],
+            "handleValidate": [Function],
+            "id": "firstName",
+            "name": "firstName",
+            "options": undefined,
+            "placeholder": "",
+            "title": "Nombre",
+            "titlePosition": 1,
+            "type": "text",
+            "validation": <Validation
+              valid={true}
+            />,
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "lastName",
+          "nodeType": "class",
+          "props": Object {
+            "checked": false,
+            "error": false,
+            "handleChange": [Function],
+            "handleOnBlur": [Function],
+            "handleValidate": [Function],
+            "id": "lastName",
+            "name": "lastName",
+            "options": undefined,
+            "placeholder": "",
+            "title": "Apellido",
+            "titlePosition": 1,
+            "type": "text",
+            "validation": <Validation
+              valid={true}
+            />,
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "username",
+          "nodeType": "class",
+          "props": Object {
+            "checked": false,
+            "error": false,
+            "handleChange": [Function],
+            "handleOnBlur": [Function],
+            "handleValidate": [Function],
+            "id": "username",
+            "name": "username",
+            "options": undefined,
+            "placeholder": "",
+            "title": "Nombre de usuario",
+            "titlePosition": 1,
+            "type": "text",
+            "validation": <Validation
+              valid={true}
+            />,
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "email",
+          "nodeType": "class",
+          "props": Object {
+            "checked": false,
+            "error": false,
+            "handleChange": [Function],
+            "handleOnBlur": [Function],
+            "handleValidate": [Function],
+            "id": "email",
+            "name": "email",
+            "options": undefined,
+            "placeholder": "",
+            "title": "email",
+            "titlePosition": 1,
+            "type": "email",
+            "validation": <Validation
+              valid={true}
+            />,
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "password1",
+          "nodeType": "class",
+          "props": Object {
+            "checked": false,
+            "error": false,
+            "handleChange": [Function],
+            "handleOnBlur": [Function],
+            "handleValidate": [Function],
+            "id": "password1",
+            "name": "password1",
+            "options": undefined,
+            "placeholder": "",
+            "title": "Contraseña",
+            "titlePosition": 1,
+            "type": "password",
+            "validation": <Validation
+              valid={true}
+            />,
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "password2",
+          "nodeType": "class",
+          "props": Object {
+            "checked": false,
+            "error": false,
+            "handleChange": [Function],
+            "handleOnBlur": [Function],
+            "handleValidate": [Function],
+            "id": "password2",
+            "name": "password2",
+            "options": undefined,
+            "placeholder": "",
+            "title": "Repita Contraseña",
+            "titlePosition": 1,
+            "type": "password",
+            "validation": <Validation
+              valid={true}
+            />,
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "country",
+          "nodeType": "class",
+          "props": Object {
+            "checked": false,
+            "error": false,
+            "handleChange": [Function],
+            "handleOnBlur": [Function],
+            "handleValidate": [Function],
+            "id": "country",
+            "name": "country",
+            "options": Array [
+              "España",
+              "Inglaterra",
+            ],
+            "placeholder": "",
+            "title": "País",
+            "titlePosition": 1,
+            "type": "select",
+            "validation": <Validation
+              valid={true}
+            />,
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "addressPepito",
+          "nodeType": "class",
+          "props": Object {
+            "checked": false,
+            "error": false,
+            "handleChange": [Function],
+            "handleOnBlur": [Function],
+            "handleValidate": [Function],
+            "id": "addressPepito",
+            "name": "addressPepito",
+            "options": undefined,
+            "placeholder": "",
+            "title": "Dirección",
+            "titlePosition": 1,
+            "type": "text",
+            "validation": <Validation
+              valid={true}
+            />,
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "addressPostalcode",
+          "nodeType": "class",
+          "props": Object {
+            "checked": false,
+            "error": false,
+            "handleChange": [Function],
+            "handleOnBlur": [Function],
+            "handleValidate": [Function],
+            "id": "addressPostalcode",
+            "name": "addressPostalcode",
+            "options": undefined,
+            "placeholder": "",
+            "title": "addressPostalcode",
+            "titlePosition": 1,
+            "type": "number",
+            "validation": <Validation
+              valid={true}
+            />,
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "addressCity",
+          "nodeType": "class",
+          "props": Object {
+            "checked": false,
+            "error": false,
+            "handleChange": [Function],
+            "handleOnBlur": [Function],
+            "handleValidate": [Function],
+            "id": "addressCity",
+            "name": "addressCity",
+            "options": undefined,
+            "placeholder": "p.e: Barcelona",
+            "title": "addressCity",
+            "titlePosition": 1,
+            "type": "text",
+            "validation": <Validation
+              valid={true}
+            />,
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "addressPhone",
+          "nodeType": "class",
+          "props": Object {
+            "checked": false,
+            "error": false,
+            "handleChange": [Function],
+            "handleOnBlur": [Function],
+            "handleValidate": [Function],
+            "id": "addressPhone",
+            "name": "addressPhone",
+            "options": undefined,
+            "placeholder": "",
+            "title": "addressPhone",
+            "titlePosition": 1,
+            "type": "text",
+            "validation": <Validation
+              valid={true}
+            />,
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "copyAddress",
+          "nodeType": "class",
+          "props": Object {
+            "checked": false,
+            "error": false,
+            "handleChange": [Function],
+            "handleOnBlur": [Function],
+            "handleValidate": [Function],
+            "id": "copyAddress",
+            "name": "copyAddress",
+            "options": undefined,
+            "placeholder": "",
+            "title": "copyAddress",
+            "titlePosition": 1,
+            "type": "checkbox-copy",
+            "validation": <Validation
+              valid={true}
+            />,
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "addressPostalcodeInvoice",
+          "nodeType": "class",
+          "props": Object {
+            "checked": false,
+            "error": false,
+            "handleChange": [Function],
+            "handleOnBlur": [Function],
+            "handleValidate": [Function],
+            "id": "addressPostalcodeInvoice",
+            "name": "addressPostalcodeInvoice",
+            "options": undefined,
+            "placeholder": "",
+            "title": "addressPostalcodeInvoice",
+            "titlePosition": 1,
+            "type": "number",
+            "validation": <Validation
+              valid={true}
+            />,
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "addressCityInvoice",
+          "nodeType": "class",
+          "props": Object {
+            "checked": false,
+            "error": false,
+            "handleChange": [Function],
+            "handleOnBlur": [Function],
+            "handleValidate": [Function],
+            "id": "addressCityInvoice",
+            "name": "addressCityInvoice",
+            "options": undefined,
+            "placeholder": "",
+            "title": "addressCityInvoice",
+            "titlePosition": 1,
+            "type": "text",
+            "validation": <Validation
+              valid={true}
+            />,
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "addressPhoneInvoice",
+          "nodeType": "class",
+          "props": Object {
+            "checked": false,
+            "error": false,
+            "handleChange": [Function],
+            "handleOnBlur": [Function],
+            "handleValidate": [Function],
+            "id": "addressPhoneInvoice",
+            "name": "addressPhoneInvoice",
+            "options": undefined,
+            "placeholder": "",
+            "title": "addressPhoneInvoice",
+            "titlePosition": 1,
+            "type": "text",
+            "validation": <Validation
+              valid={true}
+            />,
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "copyright",
+          "nodeType": "class",
+          "props": Object {
+            "checked": false,
+            "error": false,
+            "handleChange": [Function],
+            "handleOnBlur": [Function],
+            "handleValidate": [Function],
+            "id": "copyright",
+            "name": "copyright",
+            "options": undefined,
+            "placeholder": "",
+            "title": "Debe aceptar blablabla",
+            "titlePosition": -1,
+            "type": "checkbox",
+            "validation": <Validation
+              valid={true}
+            />,
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "option_1",
+          "nodeType": "class",
+          "props": Object {
+            "checked": true,
+            "error": false,
+            "handleChange": [Function],
+            "handleOnBlur": [Function],
+            "handleValidate": [Function],
+            "id": "option_1",
+            "name": "optionHome",
+            "options": Array [
+              Object {
+                "checked": true,
+                "id": "option_1",
+                "title": "optionEasy",
+              },
+              Object {
+                "checked": false,
+                "id": "option_2",
+                "title": "optionNotEasy",
+              },
+            ],
+            "placeholder": "",
+            "title": "optionHosdsdsdsme",
+            "titlePosition": 1,
+            "type": "radio",
+            "validation": <Validation
+              valid={true}
+            />,
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "text": "enviar",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "form",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

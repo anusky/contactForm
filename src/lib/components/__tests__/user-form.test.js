@@ -1,7 +1,6 @@
 import React from 'react';
 import '../../../config/jestSetup';
 import { shallow, mount } from 'enzyme';
-import renderer from 'react-test-renderer';
 import UserForm from '../user-form';
 import Field from '../field';
 import { editFormStructure } from '../../../data/structure';
@@ -12,19 +11,12 @@ const userFormWrapper = shallow(
 const userFormWrapperMount = mount(
   <UserForm formStructure={editFormStructure} id="register" />
 );
-// describe('UserForm renders without problems', () =>{
-//   it('renders correctly', () => {
-
-//     expect(userFormWrapper).toMatchSnapshot();
-//     // On the first run of this test, Jest will generate a snapshot file automatically.
-//   });
-// })
 
 describe('UserForm renders without problems ', () => {
-  //   it('renders correctly', () => {
-  //     expect(userFormWrapper).toMatchSnapshot();
-  //     // On the first run of this test, Jest will generate a snapshot file automatically.
-  //   });
+    it('renders correctly', () => {
+      expect(userFormWrapper).toMatchSnapshot();
+      // On the first run of this test, Jest will generate a snapshot file automatically.
+    });
   it('should be selectable by class "c-userform"', function() {
     expect(userFormWrapper.is('.c-userform')).toBe(true);
   });
