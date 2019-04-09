@@ -15,7 +15,8 @@ class FieldRadio extends Component {
       name,
       title,
       error,
-      id
+      id,
+      checked
     } = this.props;
     return React.createElement("label", {
       className: "c-fieldradio"
@@ -25,6 +26,7 @@ class FieldRadio extends Component {
       onChange: this.props.handleChange,
       onBlur: this.props.handleOnBlur,
       value: this.props.name,
+      checked: checked,
       type: "radio",
       name: title
     }));

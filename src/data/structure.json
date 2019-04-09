@@ -170,11 +170,22 @@
       ]
     },
     {
-      "name": "copyright",
-      "id": "copyright",
-      "title": "Debe aceptar blablabla",
+      "name": "legacy",
+      "id": "legacy",
+      "title": "You should accept our legacy",
       "titlePosition": -1,
       "type": "checkbox",
+      "mandatory": true,
+      "placeholder": "",
+      "validation": []
+    },
+    {
+      "name": "title",
+      "id": "title",
+      "tagName": "h3",
+      "tagText": "custom tag text",
+      "titlePosition": -1,
+      "type": "title",
       "mandatory": true,
       "placeholder": "",
       "validation": []

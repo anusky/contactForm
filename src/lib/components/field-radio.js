@@ -17,7 +17,7 @@ class FieldRadio extends Component {
   state = {};
 
   render() {
-    const { name, title, error, id } = this.props;
+    const { name, title, error, id, checked } = this.props;
     return (
       <label className="c-fieldradio">
         {name}
@@ -27,6 +27,7 @@ class FieldRadio extends Component {
           onChange={this.props.handleChange}
           onBlur={this.props.handleOnBlur}
           value={this.props.name}
+          checked={checked}
           type="radio"
           name={title}
         />

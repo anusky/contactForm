@@ -3,17 +3,19 @@ import PropTypes from 'prop-types';
 import FieldSelect from './field-select';
 import FieldRadio from './field-radio';
 import FieldCheckboxCopy from './field-checkbox-copy';
+import FieldTitle from './field-title';
 
 class Field extends Component {
   static defaultProps = {
     name: 'exampleName',
     id: 'exampleId',
     checked: false,
-    title: 'exampleTitle',
+    title: '',
     titlePosition: 1,
     type: 'text',
     error: false,
     validation: <div />,
+    tagName: 'h1',
     handleChange: () => {},
     handleValidate: () => {}
   };
@@ -36,17 +38,21 @@ class Field extends Component {
       error,
       options,
       placeholder,
-      validation
+      validation,
+      tagName,
+      tagText
     } = this.props;
-
     let InputField;
     switch (this.props.type) {
+      case 'title':
+        InputField = <FieldTitle name={tagText} tagName={tagName} />;
+        break;
       case 'radio':
         InputField = options.map(el => (
           <FieldRadio
             key={el.id}
             handleChange={this.handleChange}
-            checked={el.checked}
+            checked={el.id === value}
             name={el.title}
             title={name}
             id={el.id}
