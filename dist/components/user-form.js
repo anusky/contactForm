@@ -265,7 +265,10 @@ class UserForm extends Component {
     } = this.props;
     return React.createElement("form", {
       className: "c-userform",
-      onSubmit: this.handleSubmit
+      onSubmit: this.handleSubmit,
+      style: {
+        boxShadow: '0 1px 1px rgba(0,0,0,0.15),0 10px 0 -5px #eee,0 10px 1px -4px rgba(0,0,0,0.15),0 20px 0 -10px #eee,0 20px 1px -9px rgba(0,0,0,0.15)'
+      }
     }, React.createElement("h3", null, " ", `${formTitle}`, " "), formStructure.map(el => {
       const {
         name,
@@ -275,7 +278,9 @@ class UserForm extends Component {
         placeholder,
         title,
         titlePosition,
-        checked
+        checked,
+        tagText,
+        tagName
       } = el;
       return React.createElement(Field, {
         key: id,
@@ -283,6 +288,8 @@ class UserForm extends Component {
         checked: checked,
         title: title,
         titlePosition: titlePosition,
+        tagName: tagName,
+        tagText: tagText,
         error: this.state.error[name],
         handleChange: this.handleChange,
         handleOnBlur: this.handleValidate,
@@ -308,7 +315,7 @@ _defineProperty(UserForm, "propTypes", {
     id: PropTypes.string.isRequired,
     checked: PropTypes.bool,
     copyOf: PropTypes.string,
-    title: PropTypes.string.isRequired,
+    title: PropTypes.string,
     titlePosition: PropTypes.number.isRequired,
     type: PropTypes.string.isRequired,
     mandatory: PropTypes.bool.isRequired,

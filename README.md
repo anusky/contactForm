@@ -39,9 +39,10 @@ Its an important and necessary part of the development so this task is in progre
 :cow:
 
 # Versions and tasks
-`Actual version 0.0.4`
+`Actual version 0.0.5`
 - [x] ☕ Add type=radio inputs
 - [x] ☕ Add custom type=checkbox-copy inputs
+- [x] ☕ Add custom type=title to show titles/texts inside form
 - [ ] 🍕Add testing and coverage.
 - [ ] 🍟Add custom titles in the middle of the form.
 - [ ] 🍔Default css to use in case users don't have their own.

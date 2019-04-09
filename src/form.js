@@ -19,7 +19,7 @@ class Form extends React.Component {
     addressCityInvoice: '',
     addressPhoneInvoice: '',
     copyright: true,
-    optionHome: false
+    optionHome: 'option_1'
   };
   submitData = formSubmitData => {
     console.log('formSubmitData ', formSubmitData);
