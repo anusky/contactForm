@@ -19,9 +19,9 @@ class FieldRadio extends Component {
       checked
     } = this.props;
     return React.createElement("label", {
-      className: "c-fieldradio"
+      className: `c-fieldradio ${error ? `input__error` : ``}`
     }, name, React.createElement("input", {
-      className: `input__${name} ${error ? `input__error` : ``}`,
+      className: `c-fieldradio--input__${name} ${error ? `input__error` : ``}`,
       id: id,
       onChange: this.props.handleChange,
       onBlur: this.props.handleOnBlur,
@@ -29,7 +29,7 @@ class FieldRadio extends Component {
       checked: checked,
       type: "radio",
       name: title
-    }));
+    }), React.createElement("label", null));
   }
 
 }
