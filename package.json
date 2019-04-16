@@ -1,6 +1,6 @@
 {
   "name": "intv-contactuserform",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Custom contact user form",
   "license": "MIT",
   "author": "Anusky <anusky.pitrusky@gmail.com>",
@@ -52,9 +52,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "pepito": "babel src/lib/components/user-form.js",
     "build:prod": "rm -rf dist && cross-env NODE_ENV=production babel src/lib --out-dir dist --ignore 'src/**/**/*.test.js'",
-    "build:prueba": "cross-env NODE_ENV=production babel src/lib -d dist --ignore 'src/**/**/*.test.js'",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },

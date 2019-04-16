@@ -2,6 +2,14 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+const propTypes = {
+  name: PropTypes.string,
+  tagName: PropTypes.string
+};
+const defaultProps = {
+  name: 'exampleName',
+  tagName: 'h1'
+};
 
 class FieldTitle extends Component {
   constructor(...args) {
@@ -17,15 +25,12 @@ class FieldTitle extends Component {
     } = this.props;
     const CustomTag = `${tagName}`;
     return React.createElement("label", {
-      className: "c-fieldradio"
+      className: "c-fieldtitle"
     }, React.createElement(CustomTag, null, name));
   }
 
 }
 
-_defineProperty(FieldTitle, "defaultProps", {
-  name: 'exampleName',
-  tagName: 'h1'
-});
-
 export default FieldTitle;
+FieldTitle.defaultProps = defaultProps;
+FieldTitle.PropTypes = propTypes;
