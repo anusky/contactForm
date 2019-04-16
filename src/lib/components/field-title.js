@@ -1,23 +1,29 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
- class FieldTitle extends Component {
-  static defaultProps = {
-    name: 'exampleName',
-    tagName: 'h1'
-  };
+const propTypes = {
+  name: PropTypes.string,
+  tagName: PropTypes.string
+};
+const defaultProps = {
+  name: 'exampleName',
+  tagName: 'h1'
+};
 
-   state = {};
+class FieldTitle extends Component {
+  state = {};
 
-   render() {
+  render() {
     const { name, tagName } = this.props;
     const CustomTag = `${tagName}`;
     return (
-      <label className="c-fieldradio">
+      <label className="c-fieldtitle">
         <CustomTag>{name}</CustomTag>
       </label>
     );
   }
 }
 
- export default FieldTitle;
+export default FieldTitle;
+FieldTitle.defaultProps = defaultProps;
+FieldTitle.PropTypes = propTypes;

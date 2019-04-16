@@ -19,10 +19,12 @@ class FieldRadio extends Component {
   render() {
     const { name, title, error, id, checked } = this.props;
     return (
-      <label className="c-fieldradio">
+      <label
+        className={`c-fieldradio ${error ? `input__error` : ``}`}
+      >
         {name}
         <input
-          className={`input__${name} ${error ? `input__error` : ``}`}
+          className={`c-fieldradio--input__${name} ${error ? `input__error` : ``}`}
           id={id}
           onChange={this.props.handleChange}
           onBlur={this.props.handleOnBlur}
@@ -31,6 +33,7 @@ class FieldRadio extends Component {
           type="radio"
           name={title}
         />
+        <label />
       </label>
     );
   }
