@@ -266,7 +266,7 @@ class UserForm extends Component {
     return React.createElement("form", {
       className: "c-userform",
       onSubmit: this.handleSubmit,
-      autocomplete: "off"
+      autoComplete: "off"
     }, React.createElement("h3", null, " ", `${formTitle}`, " "), formStructure.map(el => {
       const {
         name,

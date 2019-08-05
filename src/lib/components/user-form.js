@@ -261,7 +261,7 @@ class UserForm extends Component {
       <form
         className="c-userform"
         onSubmit={this.handleSubmit}
-        autocomplete="off"
+        autoComplete="off"
       >
         <h3> {`${formTitle}`} </h3>
         {formStructure.map(el => {
