@@ -1,17 +1,17 @@
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-import React, { Component } from 'react';
-import { validateType } from '../utils';
-import PropTypes from 'prop-types';
-import Field from './field';
+import React, { Component } from "react";
+import { validateType } from "../utils";
+import PropTypes from "prop-types";
+import Field from "./field";
 
 class UserForm extends Component {
   constructor(...args) {
     super(...args);
 
     _defineProperty(this, "state", {
-      id: '',
-      addressList: ['City', 'Postalcode', 'Phone'],
+      id: "",
+      addressList: ["City", "Postalcode", "Phone"],
       form: {
         copyAddress: false
       },
@@ -34,7 +34,7 @@ class UserForm extends Component {
           method,
           withwho
         } = actualType;
-        actualType.withValue = method === 'comparison' ? this.state.form[withwho] : '';
+        actualType.withValue = method === "comparison" ? this.state.form[withwho] : "";
         stateAux.validated[element] = stateAux.validated[element] || validateType(actualType, data);
       }) : stateAux.validated[element] = true;
       return stateAux;
@@ -126,18 +126,18 @@ class UserForm extends Component {
       id
     } = event.target) => {
       switch (type) {
-        case 'checkbox-copy':
+        case "checkbox-copy":
           this.handleCopyChange(checked, name);
           break;
 
-        case 'checkbox':
+        case "checkbox":
           this.handleCheckboxChange({
             checked,
             name
           });
           break;
 
-        case 'radio':
+        case "radio":
           this.handleRadioChange({
             name,
             id
@@ -174,7 +174,7 @@ class UserForm extends Component {
         for (let el in this.state.form) {
           this.handleValidateUnitaryInput(el);
           stateErrorAux[el] = !this.state.validated[el] || !validateType({
-            method: 'mandatory'
+            method: "mandatory"
           }, {
             value: this.state.form[el],
             mandatory: this.state.mandatory[el]
@@ -182,7 +182,7 @@ class UserForm extends Component {
           sendData = sendData && !stateErrorAux[el];
         }
       } catch (err) {
-        console.log('Error trying to submit data ', err);
+        console.log("Error trying to submit data ", err);
       }
 
       this.setState({
@@ -197,7 +197,7 @@ class UserForm extends Component {
     _defineProperty(this, "handleCopyChange", (checked, name) => {
       let formAux = this.state.form;
       this.props.formStructure.filter(el => el.copyOf).forEach(el => {
-        formAux[el.id] = checked ? formAux[el.copyOf] : '';
+        formAux[el.id] = checked ? formAux[el.copyOf] : "";
       });
       const formError = { ...this.state.error,
         [name]: false
@@ -236,7 +236,7 @@ class UserForm extends Component {
         stateAux.error[name] = false;
         stateAux.validated[name] = true;
         stateAux.validationTypes[name] = validation;
-        stateAux.form[name] = '';
+        stateAux.form[name] = "";
       });
       return {
         mandatory: stateAux.mandatory,
@@ -265,7 +265,8 @@ class UserForm extends Component {
     } = this.props;
     return React.createElement("form", {
       className: "c-userform",
-      onSubmit: this.handleSubmit
+      onSubmit: this.handleSubmit,
+      autocomplete: "off"
     }, React.createElement("h3", null, " ", `${formTitle}`, " "), formStructure.map(el => {
       const {
         name,
@@ -335,9 +336,9 @@ _defineProperty(UserForm, "propTypes", {
 
 _defineProperty(UserForm, "defaultProps", {
   formStructure: [],
-  formTitle: '',
-  id: 'register',
-  SubmitButtonText: 'enviar',
+  formTitle: "",
+  id: "register",
+  SubmitButtonText: "enviar",
   submit: () => {},
   SubmitButton: params => {
     let {

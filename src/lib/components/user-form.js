@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { validateType } from '../utils';
-import PropTypes from 'prop-types';
-import Field from './field';
+import React, { Component } from "react";
+import { validateType } from "../utils";
+import PropTypes from "prop-types";
+import Field from "./field";
 
 class UserForm extends Component {
   //TODO dinamizar formulario desde fuera para que entre cualquier input sin nombre estipulado
@@ -38,9 +38,9 @@ class UserForm extends Component {
 
   static defaultProps = {
     formStructure: [],
-    formTitle: '',
-    id: 'register',
-    SubmitButtonText: 'enviar',
+    formTitle: "",
+    id: "register",
+    SubmitButtonText: "enviar",
     submit: () => {},
     SubmitButton: params => {
       let { text } = params;
@@ -60,8 +60,8 @@ class UserForm extends Component {
     }
   };
   state = {
-    id: '',
-    addressList: ['City', 'Postalcode', 'Phone'],
+    id: "",
+    addressList: ["City", "Postalcode", "Phone"],
     form: {
       copyAddress: false
     },
@@ -82,7 +82,7 @@ class UserForm extends Component {
       ? validationTypes[element].forEach(actualType => {
           const { method, withwho } = actualType;
           actualType.withValue =
-            method === 'comparison' ? this.state.form[withwho] : '';
+            method === "comparison" ? this.state.form[withwho] : "";
           stateAux.validated[element] =
             stateAux.validated[element] || validateType(actualType, data);
         })
@@ -119,7 +119,7 @@ class UserForm extends Component {
         stateAux.error[name] = false;
         stateAux.validated[name] = true;
         stateAux.validationTypes[name] = validation;
-        stateAux.form[name] = '';
+        stateAux.form[name] = "";
       });
       return {
         mandatory: stateAux.mandatory,
@@ -174,13 +174,13 @@ class UserForm extends Component {
 
   handleChange = (event, type, { name, value, checked, id } = event.target) => {
     switch (type) {
-      case 'checkbox-copy':
+      case "checkbox-copy":
         this.handleCopyChange(checked, name);
         break;
-      case 'checkbox':
+      case "checkbox":
         this.handleCheckboxChange({ checked, name });
         break;
-      case 'radio':
+      case "radio":
         this.handleRadioChange({ name, id });
         break;
       default:
@@ -211,7 +211,7 @@ class UserForm extends Component {
         stateErrorAux[el] =
           !this.state.validated[el] ||
           !validateType(
-            { method: 'mandatory' },
+            { method: "mandatory" },
             {
               value: this.state.form[el],
               mandatory: this.state.mandatory[el]
@@ -220,7 +220,7 @@ class UserForm extends Component {
         sendData = sendData && !stateErrorAux[el];
       }
     } catch (err) {
-      console.log('Error trying to submit data ', err);
+      console.log("Error trying to submit data ", err);
     }
     this.setState({ error: stateErrorAux }, () => {
       if (sendData) {
@@ -239,7 +239,7 @@ class UserForm extends Component {
     this.props.formStructure
       .filter(el => el.copyOf)
       .forEach(el => {
-        formAux[el.id] = checked ? formAux[el.copyOf] : '';
+        formAux[el.id] = checked ? formAux[el.copyOf] : "";
       });
     const formError = { ...this.state.error, [name]: false },
       formValidated = { ...this.state.validated, [name]: true };
@@ -261,6 +261,7 @@ class UserForm extends Component {
       <form
         className="c-userform"
         onSubmit={this.handleSubmit}
+        autocomplete="off"
       >
         <h3> {`${formTitle}`} </h3>
         {formStructure.map(el => {
