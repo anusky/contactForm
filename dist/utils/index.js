@@ -1,3 +1,1 @@
-import { validateType } from './validation';
-import { capitalize } from './strings';
-export { validateType, capitalize };
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),Object.defineProperty(exports,"validateType",{enumerable:!0,get:function get(){return _validation.validateType}}),Object.defineProperty(exports,"capitalize",{enumerable:!0,get:function get(){return _strings.capitalize}});var _validation=require("./validation"),_strings=require("./strings");

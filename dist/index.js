@@ -1,3 +1,1 @@
-import UserForm from './components/user-form';
-import Field from './components/field';
-export { UserForm, Field };
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),Object.defineProperty(exports,"UserForm",{enumerable:!0,get:function get(){return _userForm.default}}),Object.defineProperty(exports,"Field",{enumerable:!0,get:function get(){return _field.default}});var _userForm=_interopRequireDefault(require("./components/user-form")),_field=_interopRequireDefault(require("./components/field"));function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}

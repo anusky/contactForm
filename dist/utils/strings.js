@@ -1,4 +1,2 @@
-//deprecated from version 5
-const capitalize = word => `${word.charAt(0).toUpperCase()}${word.slice(1)}`;
-
-export { capitalize };
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.capitalize=void 0;//deprecated from version 5
+var capitalize=function(a){return"".concat(a.charAt(0).toUpperCase()).concat(a.slice(1))};exports.capitalize=capitalize;
