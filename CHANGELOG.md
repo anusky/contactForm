@@ -10,5 +10,5 @@ All notable changes to this project will be documented on this file.
 
 ## [0.0.11] - 2019-12-16
 
-- Added autoComplete="off" to component/UserForm temporaly
+- Added custom autoComplete option to component/UserForm
 - Fixed dist generated files to make it compatible with Edge.
